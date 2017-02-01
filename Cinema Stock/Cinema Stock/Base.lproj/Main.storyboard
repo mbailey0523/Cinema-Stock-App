@@ -26,10 +26,10 @@
                                 <rect key="frame" x="20" y="40" width="984" height="370"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-Fx-bbL">
-                                        <rect key="frame" x="0.0" y="0.0" width="380" height="58.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="984" height="58.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M7N-HZ-Rpw">
-                                                <rect key="frame" x="0.0" y="0.0" width="126" height="58.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="323" height="58.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0g-yr-t2S">
                                                         <rect key="frame" x="0.0" y="0.0" width="83.5" height="20.5"/>
@@ -38,15 +38,19 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLw-1O-PlJ">
-                                                        <rect key="frame" x="0.0" y="28.5" width="126" height="30"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="323" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="323" id="9dm-tG-ogQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lLw-1O-PlJ" secondAttribute="trailing" id="DDg-gX-bzu"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vpf-jK-pOV">
-                                                <rect key="frame" x="136" y="0.0" width="137.5" height="58.5"/>
+                                                <rect key="frame" x="333" y="0.0" width="318" height="58.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIU-eQ-1av">
                                                         <rect key="frame" x="0.0" y="0.0" width="98" height="20.5"/>
@@ -61,9 +65,12 @@
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="318" id="v73-7b-mBq"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="asx-ZC-76q">
-                                                <rect key="frame" x="283.5" y="0.0" width="96.5" height="58.5"/>
+                                                <rect key="frame" x="661" y="0.0" width="323" height="58.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rD-iu-ShP">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
@@ -78,14 +85,17 @@
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="323" id="rdB-W4-XSP"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WO3-aT-JmF">
-                                        <rect key="frame" x="0.0" y="78.5" width="357" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="984" height="96.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-rH-q0n">
-                                                <rect key="frame" x="0.0" y="0.0" width="166.5" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="487" height="96.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEE-3M-A1F">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
@@ -94,7 +104,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter main actor name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7uo-P1-xRJ">
-                                                        <rect key="frame" x="0.0" y="28.5" width="166.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -104,9 +114,13 @@
                                                         <state key="normal" title="Add Actor"/>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="7uo-P1-xRJ" secondAttribute="trailing" id="0Pl-kt-3Lp"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="HTR-cP-Wa3"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sdI-HX-B9c">
-                                                <rect key="frame" x="176.5" y="0.0" width="180.5" height="96.5"/>
+                                                <rect key="frame" x="497" y="0.0" width="487" height="96.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actresses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-Aq-b7F">
                                                         <rect key="frame" x="0.0" y="0.0" width="75.5" height="20.5"/>
@@ -115,7 +129,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter main actress name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-vc-bMo">
-                                                        <rect key="frame" x="0.0" y="28.5" width="180.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -125,6 +139,10 @@
                                                         <state key="normal" title="Add Acctress"/>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="tAQ-vc-bMo" secondAttribute="trailing" id="29r-1o-uav"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="za4-Yu-5wq"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -132,7 +150,7 @@
                                         <rect key="frame" x="0.0" y="195" width="984" height="96.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-mS-UCP">
-                                                <rect key="frame" x="0.0" y="0.0" width="500" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="487" height="96.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-FH-BiB">
                                                         <rect key="frame" x="0.0" y="0.0" width="55.5" height="20.5"/>
@@ -141,7 +159,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter writer name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sre-S8-lFr">
-                                                        <rect key="frame" x="0.0" y="28.5" width="135.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -152,11 +170,12 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="500" id="Ytm-lk-kuP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Sre-S8-lFr" secondAttribute="trailing" id="9ak-Rs-liv"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="Ytm-lk-kuP"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-H6-sGn">
-                                                <rect key="frame" x="510" y="0.0" width="474" height="96.5"/>
+                                                <rect key="frame" x="497" y="0.0" width="487" height="96.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-hX-fEe">
                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
@@ -165,7 +184,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter director name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yni-Up-DID">
-                                                        <rect key="frame" x="0.0" y="28.5" width="149" height="30"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -175,6 +194,10 @@
                                                         <state key="normal" title="Add Director"/>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="yni-Up-DID" secondAttribute="trailing" id="tKn-A6-QVf"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="xjw-Cd-FjO"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -202,6 +225,8 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Cz8-vc-btV" secondAttribute="trailing" id="3oD-w6-MdT"/>
                                     <constraint firstAttribute="trailing" secondItem="9NY-Nq-SrM" secondAttribute="trailing" id="bDU-VR-JEc"/>
+                                    <constraint firstAttribute="trailing" secondItem="oZo-Fx-bbL" secondAttribute="trailing" id="qBw-bc-4gD"/>
+                                    <constraint firstAttribute="trailing" secondItem="WO3-aT-JmF" secondAttribute="trailing" id="rOv-rp-qTX"/>
                                 </constraints>
                             </stackView>
                         </subviews>
