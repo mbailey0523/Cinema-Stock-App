@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-9K-nVf">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-9K-nVf">
                                 <rect key="frame" x="20" y="40" width="984" height="370"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-Fx-bbL">
@@ -129,10 +129,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9NY-Nq-SrM">
-                                        <rect key="frame" x="0.0" y="195" width="294.5" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="195" width="984" height="96.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-mS-UCP">
-                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="500" height="96.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-FH-BiB">
                                                         <rect key="frame" x="0.0" y="0.0" width="55.5" height="20.5"/>
@@ -151,9 +151,12 @@
                                                         <state key="normal" title="Add Writer"/>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="500" id="Ytm-lk-kuP"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-H6-sGn">
-                                                <rect key="frame" x="145.5" y="0.0" width="149" height="96.5"/>
+                                                <rect key="frame" x="510" y="0.0" width="474" height="96.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-hX-fEe">
                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
@@ -176,7 +179,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cz8-vc-btV">
-                                        <rect key="frame" x="0.0" y="311.5" width="174" height="58.5"/>
+                                        <rect key="frame" x="0.0" y="311.5" width="984" height="58.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaI-r9-Dqm">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
@@ -185,14 +188,21 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-Rd-x7M">
-                                                <rect key="frame" x="0.0" y="28.5" width="174" height="30"/>
+                                                <rect key="frame" x="0.0" y="28.5" width="984" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Qfa-Rd-x7M" secondAttribute="trailing" id="Nlg-Tg-v2a"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Cz8-vc-btV" secondAttribute="trailing" id="3oD-w6-MdT"/>
+                                    <constraint firstAttribute="trailing" secondItem="9NY-Nq-SrM" secondAttribute="trailing" id="bDU-VR-JEc"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
