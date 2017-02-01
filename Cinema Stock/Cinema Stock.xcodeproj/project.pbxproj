@@ -13,6 +13,7 @@
 		E21414C91DF7C21300914640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E21414C81DF7C21300914640 /* Assets.xcassets */; };
 		E21414CC1DF7C21300914640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E21414CA1DF7C21300914640 /* LaunchScreen.storyboard */; };
 		E21414D71DF7C21300914640 /* Cinema_StockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21414D61DF7C21300914640 /* Cinema_StockTests.swift */; };
+		E26D7ED91E4247530013E7BD /* Cinema_StockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26D7ED81E4247530013E7BD /* Cinema_StockUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E21414D21DF7C21300914640 /* Cinema StockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinema StockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21414D61DF7C21300914640 /* Cinema_StockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema_StockTests.swift; sourceTree = "<group>"; };
 		E21414D81DF7C21300914640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26D7ED81E4247530013E7BD /* Cinema_StockUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cinema_StockUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		E21414D51DF7C21300914640 /* Cinema StockTests */ = {
 			isa = PBXGroup;
 			children = (
+				E26D7ED81E4247530013E7BD /* Cinema_StockUITests.swift */,
 				E21414D61DF7C21300914640 /* Cinema_StockTests.swift */,
 				E21414D81DF7C21300914640 /* Info.plist */,
 			);
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E21414D71DF7C21300914640 /* Cinema_StockTests.swift in Sources */,
+				E26D7ED91E4247530013E7BD /* Cinema_StockUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
