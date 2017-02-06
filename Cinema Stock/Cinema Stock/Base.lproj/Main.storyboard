@@ -41,7 +41,7 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="323" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -62,7 +62,7 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="137.5" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -82,7 +82,7 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="96.5" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -107,11 +107,14 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zp-LQ-5vZ">
                                                         <rect key="frame" x="0.0" y="66.5" width="69" height="30"/>
                                                         <state key="normal" title="Add Actor"/>
+                                                        <connections>
+                                                            <action selector="addActorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OUW-Kd-LYe"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -132,11 +135,14 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xp-PF-8yJ">
                                                         <rect key="frame" x="0.0" y="66.5" width="92" height="30"/>
                                                         <state key="normal" title="Add Acctress"/>
+                                                        <connections>
+                                                            <action selector="addActressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ome-2S-2qX"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -162,11 +168,14 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBl-Lb-F1Q">
                                                         <rect key="frame" x="0.0" y="66.5" width="74" height="30"/>
                                                         <state key="normal" title="Add Writer"/>
+                                                        <connections>
+                                                            <action selector="addWriterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTA-xW-NTf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -187,11 +196,14 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uB-kM-qDt">
                                                         <rect key="frame" x="0.0" y="66.5" width="87" height="30"/>
                                                         <state key="normal" title="Add Director"/>
+                                                        <connections>
+                                                            <action selector="addDirectorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAg-J2-3MH"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -237,6 +249,21 @@
                             <constraint firstAttribute="trailingMargin" secondItem="O8s-9K-nVf" secondAttribute="trailing" id="fVe-cS-uyt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actorsTextField" destination="7uo-P1-xRJ" id="btQ-xU-dh7"/>
+                        <outlet property="actressTextField" destination="tAQ-vc-bMo" id="6hq-jO-kPy"/>
+                        <outlet property="addActorButton" destination="1Zp-LQ-5vZ" id="eTt-SV-N4z"/>
+                        <outlet property="addActressButton" destination="8xp-PF-8yJ" id="ZLB-jd-91X"/>
+                        <outlet property="addDirectorButton" destination="1uB-kM-qDt" id="JD1-6B-lGV"/>
+                        <outlet property="addDirectorsButton" destination="1uB-kM-qDt" id="4jl-L3-lTk"/>
+                        <outlet property="addWriterButton" destination="SBl-Lb-F1Q" id="j1u-k9-JbE"/>
+                        <outlet property="directorsTextField" destination="yni-Up-DID" id="NeR-oe-yR8"/>
+                        <outlet property="movieDescriptionTextField" destination="Qfa-Rd-x7M" id="5X6-QJ-GRo"/>
+                        <outlet property="movieTitleTextField" destination="lLw-1O-PlJ" id="rGO-hb-FXy"/>
+                        <outlet property="ratedTextField" destination="kgR-Su-Ita" id="uXf-ad-6BF"/>
+                        <outlet property="releaseYearTextField" destination="UEr-BV-yqR" id="j4h-yw-9mX"/>
+                        <outlet property="writersTextField" destination="Sre-S8-lFr" id="QNX-yd-AYD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
