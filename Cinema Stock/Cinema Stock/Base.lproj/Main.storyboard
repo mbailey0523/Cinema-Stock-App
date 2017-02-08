@@ -125,7 +125,7 @@
                                                         <rect key="frame" x="0.0" y="142.5" width="69" height="30"/>
                                                         <state key="normal" title="Add Actor"/>
                                                         <connections>
-                                                            <action selector="addActorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OUW-Kd-LYe"/>
+                                                            <action selector="addActorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vi7-TW-OXI"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -167,7 +167,7 @@
                                                         <rect key="frame" x="0.0" y="142.5" width="92" height="30"/>
                                                         <state key="normal" title="Add Acctress"/>
                                                         <connections>
-                                                            <action selector="addActressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ome-2S-2qX"/>
+                                                            <action selector="addActressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWp-LW-kbt"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -214,7 +214,7 @@
                                                         <rect key="frame" x="0.0" y="142.5" width="74" height="30"/>
                                                         <state key="normal" title="Add Writer"/>
                                                         <connections>
-                                                            <action selector="addWriterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTA-xW-NTf"/>
+                                                            <action selector="addWritersButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ivY-N6-9Aj"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -256,7 +256,7 @@
                                                         <rect key="frame" x="0.0" y="142.5" width="87" height="30"/>
                                                         <state key="normal" title="Add Director"/>
                                                         <connections>
-                                                            <action selector="addDirectorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAg-J2-3MH"/>
+                                                            <action selector="addDirectorsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zwt-Ld-7E7"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -312,14 +312,9 @@
                         <outlet property="actressTextField" destination="tAQ-vc-bMo" id="6hq-jO-kPy"/>
                         <outlet property="actressTextField2" destination="Amu-7J-vJ3" id="Fk6-qd-7Gb"/>
                         <outlet property="actressTextField3" destination="PU6-09-uyf" id="udl-7j-rzV"/>
-                        <outlet property="addActorButton" destination="1Zp-LQ-5vZ" id="eTt-SV-N4z"/>
-                        <outlet property="addActressButton" destination="8xp-PF-8yJ" id="ZLB-jd-91X"/>
-                        <outlet property="addDirectorButton" destination="1uB-kM-qDt" id="JD1-6B-lGV"/>
-                        <outlet property="addDirectorsButton" destination="1uB-kM-qDt" id="4jl-L3-lTk"/>
-                        <outlet property="addWriterButton" destination="SBl-Lb-F1Q" id="j1u-k9-JbE"/>
                         <outlet property="directorsTextField" destination="yni-Up-DID" id="NeR-oe-yR8"/>
                         <outlet property="directorsTextField2" destination="yFO-rU-MRh" id="OlY-cq-3QF"/>
-                        <outlet property="directorsTextField3" destination="Ztf-Jn-5sB" id="ocF-Sm-n3d"/>
+                        <outlet property="directorsTextField3" destination="Ztf-Jn-5sB" id="zXu-Ub-c33"/>
                         <outlet property="movieDescriptionTextField" destination="Qfa-Rd-x7M" id="5X6-QJ-GRo"/>
                         <outlet property="movieTitleTextField" destination="lLw-1O-PlJ" id="rGO-hb-FXy"/>
                         <outlet property="ratedTextField" destination="kgR-Su-Ita" id="uXf-ad-6BF"/>

@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var actorsTextField: UITextField!
 	@IBOutlet weak var actorsTextField2: UITextField!
 	@IBOutlet weak var actorsTextField3: UITextField!
-	
+
 	@IBOutlet weak var actressTextField: UITextField!
 	@IBOutlet weak var actressTextField2: UITextField!
 	@IBOutlet weak var actressTextField3: UITextField!
@@ -40,110 +40,116 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		movieTitleTextField.delegate = self
 		releaseYearTextField.delegate = self
 		ratedTextField.delegate = self
+		
 		actorsTextField.delegate = self
 		actorsTextField2.delegate = self
 		actorsTextField3.delegate = self
+		
 		actressTextField.delegate = self
 		actressTextField2.delegate = self
 		actressTextField3.delegate = self
+		
 		writersTextField.delegate = self
 		writersTextField2.delegate = self
 		writersTextField3.delegate = self
+		
 		directorsTextField.delegate = self
 		directorsTextField2.delegate = self
 		directorsTextField3.delegate = self
+		
 		movieDescriptionTextField.delegate = self
 	}
 	
 	//MARK: UITextFieldDelegate
 	
 	// Movie title
-	func movieTitleTextFieldShouldReturn(_ textField: UITextField) -> Bool {
+	func movieTitileTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		movieTitleTextField.resignFirstResponder()
 		return true
 	}
 	
-	func movieTitleTextFieldDidEndEditing(_ textField: UITextField) {
-		<#code#>
+	func movieTitileextFieldDidEndEditing(_ textField: UITextField) {
+		print(movieTitleTextField)
 	}
 	
 	// Release year
 	func releaseYearTextFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
+		releaseYearTextField.resignFirstResponder()
 		return true
 	}
 	
 	func releaseYearTextFieldDidEndEditing(_ textField: UITextField) {
-		<#code#>
+		print(releaseYearTextField)
 	}
 	
 	// Rated
 	func ratedTextFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
+		ratedTextField.resignFirstResponder()
 		return true
 	}
 	
 	func ratedTextFieldDidEndEditing(_ textField: UITextField) {
-		<#code#>
+		print(ratedTextField)
 	}
 	
 	// Actors
 	func actorsTextFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
+		actorsTextField.resignFirstResponder()
 		return true
 	}
 	
 	func actorsTextFieldDidEndEditing(_ textField: UITextField) {
-		<#code#>
+		print(actorsTextField)
 	}
 	
 	// Actress
 	func actressTextFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
+		actressTextField.resignFirstResponder()
 		return true
 	}
 	
 	func actressTextFieldDidEndEditing(_ textField: UITextField) {
-		<#code#>
+		print(actressTextField)
 	}
 	
 	// Writers
 	func writersTextFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
+		writersTextField.resignFirstResponder()
 		return true
 	}
 	
 	func writersTextFieldDidEndEditing(_ textField: UITextField) {
-		<#code#>
+		print(writersTextField)
 	}
 	
 	// Directors
 	func directorsTextFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
+		directorsTextField.resignFirstResponder()
 		return true
 	}
 	
 	func directorsTextFieldDidEndEditing(_ textField: UITextField) {
-		<#code#>
+		print(directorsTextField)
 	}
 	
 	// Movie description
 	func movieDescriptionTextFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
+		movieDescriptionTextField.resignFirstResponder()
 		return true
 	}
 	
 	func movieDescriptionTextFieldDidEndEditing(_ textField: UITextField) {
-		<#code#>
+		print(movieDescriptionTextField)
 	}
 	
 	
 	//MARK: Actions
 	// Actor button
-	@IBAction func addActorButton(_ sender: UIButton) {
+	@IBAction func addActorsButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
-		actorsTextField2.accessibilityElementsHidden = false
+		// actorsTextField2.accessibilityElementsHidden = false
 	}
+	
 	
 	// Actress button
 	@IBAction func addActressButton(_ sender: UIButton) {
@@ -151,13 +157,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	// Writer button
-	@IBAction func addWriterButton(_ sender: UIButton) {
+	@IBAction func addWritersButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
 	}
 	
 	// Director button
-	@IBAction func addDirectorButton(_ sender: UIButton) {
+	@IBAction func addDirectorsButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
 	}
+	
 }
 
