@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-9K-nVf">
-                                <rect key="frame" x="20" y="40" width="984" height="370"/>
+                                <rect key="frame" x="20" y="40" width="984" height="522"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-Fx-bbL">
                                         <rect key="frame" x="0.0" y="0.0" width="984" height="58.5"/>
@@ -92,10 +92,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WO3-aT-JmF">
-                                        <rect key="frame" x="0.0" y="78.5" width="984" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="984" height="172.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-rH-q0n">
-                                                <rect key="frame" x="0.0" y="0.0" width="487" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="487" height="172.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEE-3M-A1F">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="20.5"/>
@@ -109,8 +109,20 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter main actor name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpE-RO-GDl">
+                                                        <rect key="frame" x="0.0" y="66.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter main actor name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEy-kE-f6m">
+                                                        <rect key="frame" x="0.0" y="104.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zp-LQ-5vZ">
-                                                        <rect key="frame" x="0.0" y="66.5" width="69" height="30"/>
+                                                        <rect key="frame" x="0.0" y="142.5" width="69" height="30"/>
                                                         <state key="normal" title="Add Actor"/>
                                                         <connections>
                                                             <action selector="addActorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OUW-Kd-LYe"/>
@@ -119,11 +131,13 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="7uo-P1-xRJ" secondAttribute="trailing" id="0Pl-kt-3Lp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rEy-kE-f6m" secondAttribute="trailing" id="1Ky-cM-TEl"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="HTR-cP-Wa3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qpE-RO-GDl" secondAttribute="trailing" id="PBH-mL-nAi"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sdI-HX-B9c">
-                                                <rect key="frame" x="497" y="0.0" width="487" height="96.5"/>
+                                                <rect key="frame" x="497" y="0.0" width="487" height="172.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actresses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-Aq-b7F">
                                                         <rect key="frame" x="0.0" y="0.0" width="75.5" height="20.5"/>
@@ -137,8 +151,20 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter main actress name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Amu-7J-vJ3">
+                                                        <rect key="frame" x="0.0" y="66.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter main actress name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PU6-09-uyf">
+                                                        <rect key="frame" x="0.0" y="104.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xp-PF-8yJ">
-                                                        <rect key="frame" x="0.0" y="66.5" width="92" height="30"/>
+                                                        <rect key="frame" x="0.0" y="142.5" width="92" height="30"/>
                                                         <state key="normal" title="Add Acctress"/>
                                                         <connections>
                                                             <action selector="addActressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ome-2S-2qX"/>
@@ -146,17 +172,19 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Amu-7J-vJ3" secondAttribute="trailing" id="1pr-Mp-uMd"/>
                                                     <constraint firstAttribute="trailing" secondItem="tAQ-vc-bMo" secondAttribute="trailing" id="29r-1o-uav"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PU6-09-uyf" secondAttribute="trailing" id="UYT-hy-W3a"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="za4-Yu-5wq"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9NY-Nq-SrM">
-                                        <rect key="frame" x="0.0" y="195" width="984" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="271" width="984" height="172.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hMp-mS-UCP">
-                                                <rect key="frame" x="0.0" y="0.0" width="487" height="96.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="487" height="172.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4Y-FH-BiB">
                                                         <rect key="frame" x="0.0" y="0.0" width="55.5" height="20.5"/>
@@ -170,8 +198,20 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter writer name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CvV-GD-LaH">
+                                                        <rect key="frame" x="0.0" y="66.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter writer name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-LR-1om">
+                                                        <rect key="frame" x="0.0" y="104.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBl-Lb-F1Q">
-                                                        <rect key="frame" x="0.0" y="66.5" width="74" height="30"/>
+                                                        <rect key="frame" x="0.0" y="142.5" width="74" height="30"/>
                                                         <state key="normal" title="Add Writer"/>
                                                         <connections>
                                                             <action selector="addWriterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTA-xW-NTf"/>
@@ -180,11 +220,13 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Sre-S8-lFr" secondAttribute="trailing" id="9ak-Rs-liv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hOh-LR-1om" secondAttribute="trailing" id="P37-YP-BdY"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="Ytm-lk-kuP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CvV-GD-LaH" secondAttribute="trailing" id="oQ7-np-yLa"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-H6-sGn">
-                                                <rect key="frame" x="497" y="0.0" width="487" height="96.5"/>
+                                                <rect key="frame" x="497" y="0.0" width="487" height="172.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCu-hX-fEe">
                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
@@ -198,8 +240,20 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter director name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yFO-rU-MRh">
+                                                        <rect key="frame" x="0.0" y="66.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter director name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-Jn-5sB">
+                                                        <rect key="frame" x="0.0" y="104.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uB-kM-qDt">
-                                                        <rect key="frame" x="0.0" y="66.5" width="87" height="30"/>
+                                                        <rect key="frame" x="0.0" y="142.5" width="87" height="30"/>
                                                         <state key="normal" title="Add Director"/>
                                                         <connections>
                                                             <action selector="addDirectorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAg-J2-3MH"/>
@@ -207,6 +261,8 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="yFO-rU-MRh" secondAttribute="trailing" id="WbD-SX-Icd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ztf-Jn-5sB" secondAttribute="trailing" id="fWm-Kc-uqR"/>
                                                     <constraint firstAttribute="trailing" secondItem="yni-Up-DID" secondAttribute="trailing" id="tKn-A6-QVf"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="xjw-Cd-FjO"/>
                                                 </constraints>
@@ -214,7 +270,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cz8-vc-btV">
-                                        <rect key="frame" x="0.0" y="311.5" width="984" height="58.5"/>
+                                        <rect key="frame" x="0.0" y="463.5" width="984" height="58.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaI-r9-Dqm">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
@@ -251,18 +307,26 @@
                     </view>
                     <connections>
                         <outlet property="actorsTextField" destination="7uo-P1-xRJ" id="btQ-xU-dh7"/>
+                        <outlet property="actorsTextField2" destination="qpE-RO-GDl" id="xEo-dL-kzc"/>
+                        <outlet property="actorsTextField3" destination="rEy-kE-f6m" id="j71-fL-GCq"/>
                         <outlet property="actressTextField" destination="tAQ-vc-bMo" id="6hq-jO-kPy"/>
+                        <outlet property="actressTextField2" destination="Amu-7J-vJ3" id="Fk6-qd-7Gb"/>
+                        <outlet property="actressTextField3" destination="PU6-09-uyf" id="udl-7j-rzV"/>
                         <outlet property="addActorButton" destination="1Zp-LQ-5vZ" id="eTt-SV-N4z"/>
                         <outlet property="addActressButton" destination="8xp-PF-8yJ" id="ZLB-jd-91X"/>
                         <outlet property="addDirectorButton" destination="1uB-kM-qDt" id="JD1-6B-lGV"/>
                         <outlet property="addDirectorsButton" destination="1uB-kM-qDt" id="4jl-L3-lTk"/>
                         <outlet property="addWriterButton" destination="SBl-Lb-F1Q" id="j1u-k9-JbE"/>
                         <outlet property="directorsTextField" destination="yni-Up-DID" id="NeR-oe-yR8"/>
+                        <outlet property="directorsTextField2" destination="yFO-rU-MRh" id="OlY-cq-3QF"/>
+                        <outlet property="directorsTextField3" destination="Ztf-Jn-5sB" id="ocF-Sm-n3d"/>
                         <outlet property="movieDescriptionTextField" destination="Qfa-Rd-x7M" id="5X6-QJ-GRo"/>
                         <outlet property="movieTitleTextField" destination="lLw-1O-PlJ" id="rGO-hb-FXy"/>
                         <outlet property="ratedTextField" destination="kgR-Su-Ita" id="uXf-ad-6BF"/>
                         <outlet property="releaseYearTextField" destination="UEr-BV-yqR" id="j4h-yw-9mX"/>
                         <outlet property="writersTextField" destination="Sre-S8-lFr" id="QNX-yd-AYD"/>
+                        <outlet property="writersTextField2" destination="CvV-GD-LaH" id="8SA-Gd-Luv"/>
+                        <outlet property="writersTextField3" destination="hOh-LR-1om" id="X9j-UL-yyl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
