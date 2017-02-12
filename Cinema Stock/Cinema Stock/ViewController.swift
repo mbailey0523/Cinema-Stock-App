@@ -68,8 +68,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		return true
 	}
 	
-	func movieTitileextFieldDidEndEditing(_ textField: UITextField) {
-		print(movieTitleTextField)
+	func movieTitleTextFieldDidEndEditing(_ textField: UITextField) {
+		releaseYearTextField.becomeFirstResponder()
+		return
 	}
 	
 	// Release year
@@ -83,12 +84,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	// Rated
-	func ratedTextFieldShouldReturn(_ textField: UITextField) -> Bool {
+	func movieRatedTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		ratedTextField.resignFirstResponder()
 		return true
 	}
 	
-	func ratedTextFieldDidEndEditing(_ textField: UITextField) {
+	func movieRatedTextFieldDidEndEditing(_ textField: UITextField) {
 		print(ratedTextField)
 	}
 	
@@ -138,32 +139,50 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		return true
 	}
 	
-	func movieDescriptionTextFieldDidEndEditing(_ textField: UITextField) {
-		print(movieDescriptionTextField)
-	}
-	
 	
 	//MARK: Actions
 	// Actor button
 	@IBAction func addActorsButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
-		// actorsTextField2.accessibilityElementsHidden = false
+		if (actorsTextField2.isHidden == true) {
+			actorsTextField2.isHidden = false
+		}
+		else if (actorsTextField3.isHidden == true) {
+			actorsTextField3.isHidden = false
+		}
 	}
-	
 	
 	// Actress button
 	@IBAction func addActressButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
+		if (actressTextField2.isHidden == true) {
+			actressTextField2.isHidden = false
+		}
+		else if (actressTextField3.isHidden == true) {
+			actressTextField3.isHidden = false
+		}
 	}
 	
 	// Writer button
 	@IBAction func addWritersButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
+		if (writersTextField2.isHidden == true) {
+			writersTextField2.isHidden = false
+		}
+		else if (writersTextField3.isHidden == true) {
+			writersTextField3.isHidden = false
+		}
 	}
 	
 	// Director button
 	@IBAction func addDirectorsButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
+		if (directorsTextField2.isHidden == true) {
+			directorsTextField2.isHidden = false
+		}
+		else if (directorsTextField3.isHidden == true) {
+			directorsTextField3.isHidden = false
+		}
 	}
 	
 }
