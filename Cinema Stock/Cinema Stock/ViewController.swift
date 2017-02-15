@@ -65,12 +65,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	// Movie title
 	func movieTitileTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		movieTitleTextField.resignFirstResponder()
+		//self.releaseYearTextField.becomeFirstResponder()
 		return true
 	}
 	
 	func movieTitleTextFieldDidEndEditing(_ textField: UITextField) {
 		releaseYearTextField.becomeFirstResponder()
-		return
 	}
 	
 	// Release year
@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	// Rated
-	func movieRatedTextFieldShouldReturn(_ textField: UITextField) -> Bool {
+	func ratedTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		ratedTextField.resignFirstResponder()
 		return true
 	}
