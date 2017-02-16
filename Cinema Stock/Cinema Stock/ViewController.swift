@@ -14,49 +14,40 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var movieTitleTextField: UITextField!
 	@IBOutlet weak var releaseYearTextField: UITextField!
 	@IBOutlet weak var ratedTextField: UITextField!
-	
 	@IBOutlet weak var actorsTextField: UITextField!
 	@IBOutlet weak var actorsTextField2: UITextField!
 	@IBOutlet weak var actorsTextField3: UITextField!
-
 	@IBOutlet weak var actressTextField: UITextField!
 	@IBOutlet weak var actressTextField2: UITextField!
 	@IBOutlet weak var actressTextField3: UITextField!
-	
 	@IBOutlet weak var writersTextField: UITextField!
 	@IBOutlet weak var writersTextField2: UITextField!
 	@IBOutlet weak var writersTextField3: UITextField!
-	
 	@IBOutlet weak var directorsTextField: UITextField!
 	@IBOutlet weak var directorsTextField2: UITextField!
 	@IBOutlet weak var directorsTextField3: UITextField!
-	
 	@IBOutlet weak var movieDescriptionTextField: UITextField!
 	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 		// Handle the text field's input through delegate callbacks.
 		movieTitleTextField.delegate = self
 		releaseYearTextField.delegate = self
 		ratedTextField.delegate = self
-		
 		actorsTextField.delegate = self
 		actorsTextField2.delegate = self
 		actorsTextField3.delegate = self
-		
 		actressTextField.delegate = self
 		actressTextField2.delegate = self
 		actressTextField3.delegate = self
-		
 		writersTextField.delegate = self
 		writersTextField2.delegate = self
 		writersTextField3.delegate = self
-		
 		directorsTextField.delegate = self
 		directorsTextField2.delegate = self
 		directorsTextField3.delegate = self
-		
 		movieDescriptionTextField.delegate = self
 	}
 	
@@ -73,6 +64,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		releaseYearTextField.becomeFirstResponder()
 	}
 	
+	
 	// Release year
 	func releaseYearTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		releaseYearTextField.resignFirstResponder()
@@ -82,6 +74,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	func releaseYearTextFieldDidEndEditing(_ textField: UITextField) {
 		print(releaseYearTextField)
 	}
+	
 	
 	// Rated
 	func ratedTextFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -93,6 +86,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		print(ratedTextField)
 	}
 	
+	
 	// Actors
 	func actorsTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		actorsTextField.resignFirstResponder()
@@ -102,6 +96,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	func actorsTextFieldDidEndEditing(_ textField: UITextField) {
 		print(actorsTextField)
 	}
+	
 	
 	// Actress
 	func actressTextFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -113,6 +108,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		print(actressTextField)
 	}
 	
+	
 	// Writers
 	func writersTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		writersTextField.resignFirstResponder()
@@ -123,6 +119,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		print(writersTextField)
 	}
 	
+	
 	// Directors
 	func directorsTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		directorsTextField.resignFirstResponder()
@@ -132,6 +129,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	func directorsTextFieldDidEndEditing(_ textField: UITextField) {
 		print(directorsTextField)
 	}
+	
 	
 	// Movie description
 	func movieDescriptionTextFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -152,6 +150,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		}
 	}
 	
+	
 	// Actress button
 	@IBAction func addActressButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
@@ -163,6 +162,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		}
 	}
 	
+	
 	// Writer button
 	@IBAction func addWritersButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
@@ -173,6 +173,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 			writersTextField3.isHidden = false
 		}
 	}
+	
 	
 	// Director button
 	@IBAction func addDirectorsButton(_ sender: UIButton) {

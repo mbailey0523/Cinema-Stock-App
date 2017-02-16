@@ -83,8 +83,8 @@
 			children = (
 				E21414C11DF7C21300914640 /* AppDelegate.swift */,
 				E21414C31DF7C21300914640 /* ViewController.swift */,
-				E21414C51DF7C21300914640 /* Main.storyboard */,
 				E2D72F151E54D8030036E814 /* Movie.swift */,
+				E21414C51DF7C21300914640 /* Main.storyboard */,
 				E21414C81DF7C21300914640 /* Assets.xcassets */,
 				E21414CA1DF7C21300914640 /* LaunchScreen.storyboard */,
 				E21414CD1DF7C21300914640 /* Info.plist */,
