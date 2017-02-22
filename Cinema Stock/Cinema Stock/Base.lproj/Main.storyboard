@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="-535.546875" y="138.28125"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cinema_Stock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="Cinema_Stock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-9K-nVf">
-                                <rect key="frame" x="20" y="40" width="984" height="522"/>
+                                <rect key="frame" x="20" y="40" width="984" height="636"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-Fx-bbL">
                                         <rect key="frame" x="0.0" y="0.0" width="984" height="58.5"/>
@@ -343,32 +343,80 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cz8-vc-btV">
-                                        <rect key="frame" x="0.0" y="463.5" width="984" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g3l-Wf-Qe8">
+                                        <rect key="frame" x="0.0" y="463.5" width="984" height="172.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaI-r9-Dqm">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-Rd-x7M">
-                                                <rect key="frame" x="0.0" y="28.5" width="984" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cEu-qb-u70">
+                                                <rect key="frame" x="0.0" y="0.0" width="487" height="172.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8j-um-Vc3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="487" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M5b-Pm-H1z">
+                                                        <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slc-wk-1AA">
+                                                        <rect key="frame" x="0.0" y="66.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NmS-Az-HxJ">
+                                                        <rect key="frame" x="0.0" y="104.5" width="487" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nU-9I-mZk">
+                                                        <rect key="frame" x="0.0" y="142.5" width="487" height="30"/>
+                                                        <state key="normal" title="Add Genre"/>
+                                                        <connections>
+                                                            <action selector="addGenresButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJt-Rr-C5O"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="NmS-Az-HxJ" secondAttribute="trailing" id="SQ0-5B-VhQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Slc-wk-1AA" secondAttribute="trailing" id="VrJ-Jk-LPO"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="hvS-GZ-mPe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="M5b-Pm-H1z" secondAttribute="trailing" id="paI-bH-b9j"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cz8-vc-btV">
+                                                <rect key="frame" x="497" y="0.0" width="487" height="172.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaI-r9-Dqm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-Rd-x7M">
+                                                        <rect key="frame" x="0.0" y="28.5" width="487" height="144"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Qfa-Rd-x7M" secondAttribute="trailing" id="Nlg-Tg-v2a"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="487" id="hMq-TE-9Pb"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Qfa-Rd-x7M" secondAttribute="trailing" id="Nlg-Tg-v2a"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Cz8-vc-btV" secondAttribute="trailing" id="3oD-w6-MdT"/>
                                     <constraint firstAttribute="trailing" secondItem="9NY-Nq-SrM" secondAttribute="trailing" id="bDU-VR-JEc"/>
                                     <constraint firstAttribute="trailing" secondItem="oZo-Fx-bbL" secondAttribute="trailing" id="qBw-bc-4gD"/>
                                     <constraint firstAttribute="trailing" secondItem="WO3-aT-JmF" secondAttribute="trailing" id="rOv-rp-qTX"/>
+                                    <constraint firstAttribute="trailing" secondItem="g3l-Wf-Qe8" secondAttribute="trailing" id="uEt-v0-sRt"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -389,6 +437,9 @@
                         <outlet property="directorsTextField" destination="yni-Up-DID" id="NeR-oe-yR8"/>
                         <outlet property="directorsTextField2" destination="yFO-rU-MRh" id="OlY-cq-3QF"/>
                         <outlet property="directorsTextField3" destination="Ztf-Jn-5sB" id="zXu-Ub-c33"/>
+                        <outlet property="genreTextField" destination="M5b-Pm-H1z" id="PVL-xb-oVE"/>
+                        <outlet property="genreTextField2" destination="Slc-wk-1AA" id="ldP-q8-JC9"/>
+                        <outlet property="genreTextField3" destination="NmS-Az-HxJ" id="gng-sd-dpP"/>
                         <outlet property="movieDescriptionTextField" destination="Qfa-Rd-x7M" id="5X6-QJ-GRo"/>
                         <outlet property="movieTitleTextField" destination="lLw-1O-PlJ" id="rGO-hb-FXy"/>
                         <outlet property="ratedTextField" destination="kgR-Su-Ita" id="uXf-ad-6BF"/>

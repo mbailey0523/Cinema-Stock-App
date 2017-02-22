@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 	
 	//MARK: Properties
 	@IBOutlet weak var movieTitleTextField: UITextField!
@@ -27,6 +27,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var directorsTextField2: UITextField!
 	@IBOutlet weak var directorsTextField3: UITextField!
 	@IBOutlet weak var movieDescriptionTextField: UITextField!
+	@IBOutlet weak var genreTextField: UITextField!
+	@IBOutlet weak var genreTextField2: UITextField!
+	@IBOutlet weak var genreTextField3: UITextField!
+	
 	
 	
 	override func viewDidLoad() {
@@ -49,6 +53,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		directorsTextField2.delegate = self
 		directorsTextField3.delegate = self
 		movieDescriptionTextField.delegate = self
+		genreTextField.delegate = self
+		genreTextField2.delegate = self
+		genreTextField3.delegate = self
 	}
 	
 	//MARK: UITextFieldDelegate
@@ -131,6 +138,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	
+	// Genres
+	func genreTextFieldShouldReturn(_ textField: UITextField) -> Bool {
+		genreTextField.resignFirstResponder()
+		return true
+	}
+	
+	func genreTextFieldDidEndEditing(_ textField: UITextField) {
+		print(genreTextField)
+	}
+	
+	
 	// Movie description
 	func movieDescriptionTextFieldShouldReturn(_ textField: UITextField) -> Bool {
 		movieDescriptionTextField.resignFirstResponder()
@@ -183,6 +201,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		}
 		else if (directorsTextField3.isHidden == true) {
 			directorsTextField3.isHidden = false
+		}
+	}
+	
+	
+	// Genre button
+	@IBAction func addGenresButton(_ sender: UIButton) {
+		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
+		if (genreTextField2.isHidden == true) {
+			genreTextField2.isHidden = false
+		}
+		else if (genreTextField3.isHidden == true) {
+			genreTextField3.isHidden = false
 		}
 	}
 	
