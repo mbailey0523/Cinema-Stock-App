@@ -26,6 +26,9 @@ class Movie {
 	var director1: String
 	var director2: String?
 	var director3: String?
+	var genre1: String
+	var genre2: String?
+	var genre3: String?
 	var description: String
 	
 	
@@ -45,10 +48,13 @@ class Movie {
 	     director1: String,
 	     director2: String?,
 	     director3: String?,
+	     genre1: String,
+	     genre2: String?,
+	     genre3: String?,
 	     description: String) {
 		
 		// Initialization should fail if there is no title, year, rate, writer, director, or description
-		if title.isEmpty || year.isEmpty || rated.isEmpty || writer1.isEmpty || director1.isEmpty || description.isEmpty {
+		if title.isEmpty || year.isEmpty || rated.isEmpty || writer1.isEmpty || director1.isEmpty || genre1.isEmpty || description.isEmpty {
 			return nil
 		}
 		
@@ -68,6 +74,9 @@ class Movie {
 		self.director1 = director1
 		self.director2 = director2
 		self.director3 = director3
+		self.genre1 = genre1
+		self.genre2 = genre2
+		self.genre3 = genre3
 		self.description = description
 	}
 }

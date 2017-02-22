@@ -346,11 +346,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g3l-Wf-Qe8">
                                         <rect key="frame" x="0.0" y="463.5" width="984" height="172.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cEu-qb-u70">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cEu-qb-u70">
                                                 <rect key="frame" x="0.0" y="0.0" width="487" height="172.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8j-um-Vc3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="487" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="46.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -374,7 +374,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nU-9I-mZk">
-                                                        <rect key="frame" x="0.0" y="142.5" width="487" height="30"/>
+                                                        <rect key="frame" x="0.0" y="142.5" width="73" height="30"/>
                                                         <state key="normal" title="Add Genre"/>
                                                         <connections>
                                                             <action selector="addGenresButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJt-Rr-C5O"/>

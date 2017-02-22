@@ -99,17 +99,17 @@ class MovieTableViewController: UITableViewController {
 	
 	// MARK: Private Methods
 	private func loadSampleMovies(){
-		guard let movie1 = Movie(title: "Beauty and the Beast", year: "1991", rated: "G", actor1: "Robby Benson", actor2: "", actor3: "", actress1: "Paige O'Hara", actress2: "", actress3: "", writer1: "Linda Woolverton", writer2: "Brenda Chapman", writer3: "", director1: "Gary Trousdale", director2: "Kirk Wise", director3: "", description: "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince.")
+		guard let movie1 = Movie(title: "Beauty and the Beast", year: "1991", rated: "G", actor1: "Robby Benson", actor2: "", actor3: "", actress1: "Paige O'Hara", actress2: "", actress3: "", writer1: "Linda Woolverton", writer2: "Brenda Chapman", writer3: "", director1: "Gary Trousdale", director2: "Kirk Wise", director3: "", genre1: "Animation", genre2: "Family", genre3: "Musical", description: "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince.")
 		else {
 			fatalError("Unable to instantiate movie1.")
 		}
 		
-		guard let movie2 = Movie(title: "She's the Man", year: "2006", rated: "PG-13", actor1: "Channing Tatum", actor2: "", actor3: "", actress1: "Amanda Bynes", actress2: "", actress3: "", writer1: "Ewan Leslie", writer2: "Karen McCullah", writer3: "", director1: "Andy Fickman", director2: "", director3: "", description: "When her brother decides to ditch for a couple weeks in London, Viola heads over to his elite boarding school, disguises herself as him, and procedes to fall for one of her soccer teammates. Little does she realize she's not the only one with romantic troubles, as she, as he, gets in the middle of a series of intermingled love affairs.")
+		guard let movie2 = Movie(title: "She's the Man", year: "2006", rated: "PG-13", actor1: "Channing Tatum", actor2: "", actor3: "", actress1: "Amanda Bynes", actress2: "", actress3: "", writer1: "Ewan Leslie", writer2: "Karen McCullah", writer3: "", director1: "Andy Fickman", director2: "", director3: "", genre1: "Comedy", genre2: "Romance", genre3: "Sport", description: "When her brother decides to ditch for a couple weeks in London, Viola heads over to his elite boarding school, disguises herself as him, and procedes to fall for one of her soccer teammates. Little does she realize she's not the only one with romantic troubles, as she, as he, gets in the middle of a series of intermingled love affairs.")
 		else {
 			fatalError("Unable to instantiate movie2.")
 		}
 		
-		guard let movie3 = Movie(title: "21 Jump Street", year: "2012", rated: "R", actor1: "Jonah Hill", actor2: "Channing Tatum", actor3: "", actress1: "", actress2: "", actress3: "", writer1: "Michael Bacall", writer2: "", writer3: "", director1: "Phil Lord", director2: "Christopher Miller", director3: "", description: "A pair of underachieved cops are sent back to a local high school to blend in and bring down a synthetic drug ring.")
+		guard let movie3 = Movie(title: "21 Jump Street", year: "2012", rated: "R", actor1: "Jonah Hill", actor2: "Channing Tatum", actor3: "", actress1: "", actress2: "", actress3: "", writer1: "Michael Bacall", writer2: "", writer3: "", director1: "Phil Lord", director2: "Christopher Miller", director3: "", genre1: "Action", genre2: "Comedy", genre3: "Crime" , description: "A pair of underachieved cops are sent back to a local high school to blend in and bring down a synthetic drug ring.")
 		else {
 			fatalError("Unable to instantiate movie3.")
 		}
