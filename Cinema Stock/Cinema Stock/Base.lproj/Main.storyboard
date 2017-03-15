@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="-529" y="1004"/>
         </scene>
-        <!--Movie Table View Controller-->
+        <!--My Movies-->
         <scene sceneID="8nF-xO-qAj">
             <objects>
                 <tableViewController id="gfw-eP-rGL" customClass="MovieTableViewController" customModule="Cinema_Stock" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dSF-Aw-s1s" id="sFt-nq-djx">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fP8-mo-VER">
@@ -144,13 +144,19 @@
                             <outlet property="delegate" destination="gfw-eP-rGL" id="CkY-g5-fZb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qu7-Fu-FM9"/>
+                    <navigationItem key="navigationItem" title="My Movies" id="qu7-Fu-FM9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kgM-G1-B39">
+                            <connections>
+                                <segue destination="I0S-vn-rPW" kind="presentation" id="By8-97-IHT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hg6-d0-hIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188.671875" y="138.28125"/>
         </scene>
-        <!--Movie View Controller-->
+        <!--New Movie-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="Cinema_Stock" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +169,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-9K-nVf">
-                                <rect key="frame" x="20" y="40" width="984" height="636"/>
+                                <rect key="frame" x="20" y="84" width="984" height="636"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-Fx-bbL">
                                         <rect key="frame" x="0.0" y="0.0" width="984" height="58.5"/>
@@ -425,19 +431,19 @@
                                                         <rect key="frame" x="0.0" y="28.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     </textField>
                                                     <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Slc-wk-1AA">
                                                         <rect key="frame" x="0.0" y="66.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     </textField>
                                                     <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NmS-Az-HxJ">
                                                         <rect key="frame" x="0.0" y="104.5" width="487" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nU-9I-mZk">
                                                         <rect key="frame" x="0.0" y="142.5" width="73" height="30"/>
@@ -493,6 +499,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="O8s-9K-nVf" secondAttribute="trailing" id="fVe-cS-uyt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Movie" id="DgV-8Z-3hf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="svj-jd-8g6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bug-Vl-63i">
+                            <connections>
+                                <segue destination="36r-4l-NJd" kind="unwind" unwindAction="unwindToMovieListWithSender:" id="wC6-Ak-8LE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="actorsTextField" destination="7uo-P1-xRJ" id="btQ-xU-dh7"/>
                         <outlet property="actorsTextField2" destination="qpE-RO-GDl" id="xEo-dL-kzc"/>
@@ -510,14 +524,16 @@
                         <outlet property="movieTitleTextField" destination="lLw-1O-PlJ" id="rGO-hb-FXy"/>
                         <outlet property="ratedTextField" destination="kgR-Su-Ita" id="uXf-ad-6BF"/>
                         <outlet property="releaseYearTextField" destination="UEr-BV-yqR" id="j4h-yw-9mX"/>
+                        <outlet property="saveButton" destination="bug-Vl-63i" id="iAf-0b-P1g"/>
                         <outlet property="writersTextField" destination="Sre-S8-lFr" id="QNX-yd-AYD"/>
                         <outlet property="writersTextField2" destination="CvV-GD-LaH" id="8SA-Gd-Luv"/>
                         <outlet property="writersTextField3" destination="hOh-LR-1om" id="X9j-UL-yyl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="36r-4l-NJd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="829.1015625" y="139.84375"/>
+            <point key="canvasLocation" x="1553.3203125" y="139.84375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="spq-de-n32">
@@ -536,6 +552,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdU-mi-BDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-535.546875" y="138.28125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CFs-I2-ISe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I0S-vn-rPW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vVz-f4-6iu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="43q-Hb-XbE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vU-dA-FNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829.1015625" y="139.84375"/>
         </scene>
     </scenes>
 </document>

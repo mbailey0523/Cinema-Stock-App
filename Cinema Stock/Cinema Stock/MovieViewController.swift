@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import os.log
+
 
 class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 	
@@ -31,6 +33,14 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 	@IBOutlet weak var genreTextField2: UITextField!
 	@IBOutlet weak var genreTextField3: UITextField!
 	
+	// Navigation Controls
+	@IBOutlet weak var saveButton: UIBarButtonItem!
+	
+	
+	/* This value is either passed by `MovieTableViewController` in `prepare(for:sender:)`
+		or constructed as part of adding a new movie.
+	*/
+	var movie: Movie?
 	
 	
 	override func viewDidLoad() {
@@ -155,8 +165,51 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		return true
 	}
 	
+//	//Save Button
+//	func textFieldDidBeginEditing(_ textField: UITextField) {
+//		// Disable the Save button qhile editing
+//		saveButton.isEnabled = false
+//	}
+	
+	
+	// MARK: Navigation
+	
+	// This method lets you configure a view controller before it is presented
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		super.prepare(for: segue, sender: sender)
+		// Configure the destination view controller only when the save button is pressed.
+		guard let button = sender as? UIBarButtonItem, button === saveButton else {
+			os_log("The saved button was not pressed, cancelling.", log: OSLog.default, type: .debug)
+			return
+		}
+		
+		let title = movieTitleTextField.text
+		let year = releaseYearTextField.text
+		let rating = ratedTextField.text
+		let actor1 = actorsTextField.text ?? ""
+		let actor2 = actorsTextField2.text ?? ""
+		let actor3 = actorsTextField3.text ?? ""
+		let actress1 = actressTextField.text ?? ""
+		let actress2 = actressTextField2.text ?? ""
+		let actress3 = actressTextField3.text ?? ""
+		let writer1 = writersTextField.text
+		let writer2 = writersTextField2.text ?? ""
+		let writer3 = writersTextField3.text ?? ""
+		let director1 = directorsTextField.text
+		let director2 = directorsTextField2.text ?? ""
+		let director3 = directorsTextField3.text ?? ""
+		let genre1 = genreTextField.text
+		let genre2 = genreTextField2.text ?? ""
+		let genre3 = genreTextField3.text ?? ""
+		let description = movieDescriptionTextField.text
+			
+		// Set the movie to be passed to MovieTableViewController after the unwind segue.
+		movie = Movie(title: title!, year: year!, rated: rating!, actor1: actor1, actor2: actor2, actor3: actor3, actress1: actress1, actress2: actress2, actress3: actress3, writer1: writer1!, writer2: writer2, writer3: writer3, director1: director1!, director2: director2, director3: director3, genre1: genre1!, genre2: genre2, genre3: genre3, description: description!)
+	}
+	
 	
 	//MARK: Actions
+	
 	// Actor button
 	@IBAction func addActorsButton(_ sender: UIButton) {
 		// unhide the text fields. probably need a simple for loop for this to only unhide one box at a time.
@@ -215,6 +268,16 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 			genreTextField3.isHidden = false
 		}
 	}
+	
+	
+	// MARK: Private Methods
+	
+//	private func updateSaveButtonState() {
+//		// Disable the Save button if text field is empty
+//		let titleText = movieTitleTextField.text
+//		saveButton.isEnabled = titleText.isEmpty
+//	}
+	
 	
 }
 

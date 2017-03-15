@@ -105,6 +105,18 @@ class MovieTableViewController: UITableViewController {
 	}
 	*/
 	
+	
+	// MARK: Actions
+	@IBAction func unwindToMovieList(sender: UIStoryboardSegue) {
+		if let sourceViewController = sender.source as? MovieViewController, let movie = sourceViewController.movie {
+			// Add a new movie.
+			let newIndexPath = IndexPath(row: movies.count, section: 0)
+			movies.append(movie)
+			tableView.insertRows(at: [newIndexPath], with: .automatic)
+		}
+	}
+	
+	
 	// MARK: Private Methods
 	private func loadSampleMovies(){
 		guard let movie1 = Movie(title: "Beauty and the Beast", year: "1991", rated: "G", actor1: "Robby Benson", actor2: "", actor3: "", actress1: "Paige O'Hara", actress2: "", actress3: "", writer1: "Linda Woolverton", writer2: "Brenda Chapman", writer3: "", director1: "Gary Trousdale", director2: "Kirk Wise", director3: "", genre1: "Animation", genre2: "Family", genre3: "Musical", description: "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince.")
