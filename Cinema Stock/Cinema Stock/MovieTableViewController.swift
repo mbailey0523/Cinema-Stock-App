@@ -50,12 +50,6 @@ class MovieTableViewController: UITableViewController {
 		cell.titleLabel.text = movie.title
 		cell.yearLabel.text = movie.year
 		cell.ratingLabel.text = movie.rated
-		cell.actor1Label.text = movie.actor1
-		cell.actress1Label.text = movie.actress1
-		cell.writer1Label.text = movie.writer1
-		cell.director1Label.text = movie.director1
-		cell.genre1Label.text = movie.genre1
-		cell.descriptionLabel.text = movie.description
 
 		return cell
 	}
