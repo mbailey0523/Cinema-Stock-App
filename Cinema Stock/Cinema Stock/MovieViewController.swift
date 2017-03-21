@@ -206,7 +206,10 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		// Set the movie to be passed to MovieTableViewController after the unwind segue.
 		movie = Movie(title: title!, year: year!, rated: rating!, actor1: actor1, actor2: actor2, actor3: actor3, actress1: actress1, actress2: actress2, actress3: actress3, writer1: writer1!, writer2: writer2, writer3: writer3, director1: director1!, director2: director2, director3: director3, genre1: genre1!, genre2: genre2, genre3: genre3, description: description!)
 	}
-	
+	@IBAction func cancel(_ sender: UIBarButtonItem) {
+		dismiss(animated: true, completion: nil)
+	}
+
 	
 	//MARK: Actions
 	

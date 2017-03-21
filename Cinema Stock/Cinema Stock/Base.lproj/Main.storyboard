@@ -57,7 +57,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dSF-Aw-s1s" id="sFt-nq-djx">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fP8-mo-VER">
@@ -458,7 +458,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Movie" id="DgV-8Z-3hf">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="svj-jd-8g6"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="svj-jd-8g6">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="lhi-9y-5dZ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="bug-Vl-63i">
                             <connections>
                                 <segue destination="36r-4l-NJd" kind="unwind" unwindAction="unwindToMovieListWithSender:" id="wC6-Ak-8LE"/>
