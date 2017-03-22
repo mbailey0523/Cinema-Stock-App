@@ -15,6 +15,10 @@
 		E21414D71DF7C21300914640 /* Cinema_StockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21414D61DF7C21300914640 /* Cinema_StockTests.swift */; };
 		E26D7ED91E4247530013E7BD /* Cinema_StockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26D7ED81E4247530013E7BD /* Cinema_StockUITests.swift */; };
 		E2D72F161E54D8030036E814 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D72F151E54D8030036E814 /* Movie.swift */; };
+		E2E850941E8219020047A2DA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E850931E8219010047A2DA /* Realm.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E2E850951E8219020047A2DA /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2E850931E8219010047A2DA /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E2E850981E8219210047A2DA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E850971E8219200047A2DA /* RealmSwift.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		E2E850991E8219210047A2DA /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E2E850971E8219200047A2DA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E2FC0B2B1E5D207B00A29590 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FC0B2A1E5D207B00A29590 /* MovieTableViewCell.swift */; };
 		E2FC0B2D1E5D259400A29590 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FC0B2C1E5D259400A29590 /* MovieTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +32,21 @@
 			remoteInfo = "Cinema Stock";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2E850961E8219020047A2DA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E2E850991E8219210047A2DA /* RealmSwift.framework in Embed Frameworks */,
+				E2E850951E8219020047A2DA /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E21414BE1DF7C21300914640 /* Cinema Stock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinema Stock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +64,8 @@
 		E2D72F171E56833D0036E814 /* MovieCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewController.swift; sourceTree = "<group>"; };
 		E2D72F1B1E56900B0036E814 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		E2D72F1D1E5695510036E814 /* MovieCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		E2E850931E8219010047A2DA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		E2E850971E8219200047A2DA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		E2FC0B2A1E5D207B00A29590 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		E2FC0B2C1E5D259400A29590 /* MovieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E850981E8219210047A2DA /* RealmSwift.framework in Frameworks */,
+				E2E850941E8219020047A2DA /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +93,8 @@
 		E21414B51DF7C21300914640 = {
 			isa = PBXGroup;
 			children = (
+				E2E850971E8219200047A2DA /* RealmSwift.framework */,
+				E2E850931E8219010047A2DA /* Realm.framework */,
 				E21414C01DF7C21300914640 /* Cinema Stock */,
 				E21414D51DF7C21300914640 /* Cinema StockTests */,
 				E21414BF1DF7C21300914640 /* Products */,
@@ -124,6 +149,8 @@
 				E21414BA1DF7C21300914640 /* Sources */,
 				E21414BB1DF7C21300914640 /* Frameworks */,
 				E21414BC1DF7C21300914640 /* Resources */,
+				E2E850961E8219020047A2DA /* Embed Frameworks */,
+				E2E8509A1E821C8D0047A2DA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -212,6 +239,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2E8509A1E821C8D0047A2DA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E21414BA1DF7C21300914640 /* Sources */ = {
@@ -369,6 +412,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Redbeard",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RealmSwift.framework",
 				);
 				INFOPLIST_FILE = "Cinema Stock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -387,6 +432,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Redbeard",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RealmSwift.framework",
 				);
 				INFOPLIST_FILE = "Cinema Stock/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

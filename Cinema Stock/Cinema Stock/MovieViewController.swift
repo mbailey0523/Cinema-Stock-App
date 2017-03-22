@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import RealmSwift
 
 
 class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
