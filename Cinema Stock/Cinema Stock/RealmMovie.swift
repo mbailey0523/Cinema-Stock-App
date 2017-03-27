@@ -19,11 +19,12 @@ class RealmMovie: Object {
 	dynamic var writer: String = ""
 	dynamic var director: String = ""
 	dynamic var genre: String = ""
-	dynamic var movie_description: String = ""
-	dynamic var user_rating: Int = 0
+	dynamic var movieDescription: String = ""
+	dynamic var userRating: Int = 0
 	dynamic var owned: Bool = false
 	dynamic var loaned: Bool = false
-	dynamic var in_list: Bool = false
+	dynamic var inList: Bool = false
+	override open class func primaryKey() -> String? {
+		return "movie_ID"
+	}
 }
-
-let realm = try! Realm()

@@ -14,6 +14,11 @@
 		E21414CC1DF7C21300914640 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E21414CA1DF7C21300914640 /* LaunchScreen.storyboard */; };
 		E21414D71DF7C21300914640 /* Cinema_StockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21414D61DF7C21300914640 /* Cinema_StockTests.swift */; };
 		E26D7ED91E4247530013E7BD /* Cinema_StockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26D7ED81E4247530013E7BD /* Cinema_StockUITests.swift */; };
+		E270187F1E889AE400E57A36 /* RealmActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E270187E1E889AE400E57A36 /* RealmActor.swift */; };
+		E27018811E889B2000E57A36 /* RealmActress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27018801E889B2000E57A36 /* RealmActress.swift */; };
+		E27018831E889B7200E57A36 /* RealmWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27018821E889B7200E57A36 /* RealmWriter.swift */; };
+		E27018851E889BEF00E57A36 /* RealmDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27018841E889BEF00E57A36 /* RealmDirector.swift */; };
+		E27018871E889C0E00E57A36 /* RealmGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27018861E889C0E00E57A36 /* RealmGenre.swift */; };
 		E291A1811E82D1EA00140293 /* RealmMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E291A1801E82D1EA00140293 /* RealmMovie.swift */; };
 		E2D72F161E54D8030036E814 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D72F151E54D8030036E814 /* Movie.swift */; };
 		E2E850941E8219020047A2DA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E850931E8219010047A2DA /* Realm.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -61,6 +66,11 @@
 		E21414D61DF7C21300914640 /* Cinema_StockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema_StockTests.swift; sourceTree = "<group>"; };
 		E21414D81DF7C21300914640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26D7ED81E4247530013E7BD /* Cinema_StockUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cinema_StockUITests.swift; sourceTree = "<group>"; };
+		E270187E1E889AE400E57A36 /* RealmActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmActor.swift; sourceTree = "<group>"; };
+		E27018801E889B2000E57A36 /* RealmActress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmActress.swift; sourceTree = "<group>"; };
+		E27018821E889B7200E57A36 /* RealmWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmWriter.swift; sourceTree = "<group>"; };
+		E27018841E889BEF00E57A36 /* RealmDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDirector.swift; sourceTree = "<group>"; };
+		E27018861E889C0E00E57A36 /* RealmGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmGenre.swift; sourceTree = "<group>"; };
 		E291A1801E82D1EA00140293 /* RealmMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMovie.swift; sourceTree = "<group>"; };
 		E2D72F151E54D8030036E814 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E2D72F171E56833D0036E814 /* MovieCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +128,11 @@
 				E21414C11DF7C21300914640 /* AppDelegate.swift */,
 				E21414C31DF7C21300914640 /* MovieViewController.swift */,
 				E291A1801E82D1EA00140293 /* RealmMovie.swift */,
+				E270187E1E889AE400E57A36 /* RealmActor.swift */,
+				E27018801E889B2000E57A36 /* RealmActress.swift */,
+				E27018821E889B7200E57A36 /* RealmWriter.swift */,
+				E27018841E889BEF00E57A36 /* RealmDirector.swift */,
+				E27018861E889C0E00E57A36 /* RealmGenre.swift */,
 				E2D72F151E54D8030036E814 /* Movie.swift */,
 				E2D72F171E56833D0036E814 /* MovieCollectionViewController.swift */,
 				E2D72F1B1E56900B0036E814 /* MovieCollectionViewCell.swift */,
@@ -264,10 +279,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E27018831E889B7200E57A36 /* RealmWriter.swift in Sources */,
 				E2FC0B2D1E5D259400A29590 /* MovieTableViewController.swift in Sources */,
 				E21414C41DF7C21300914640 /* MovieViewController.swift in Sources */,
+				E27018871E889C0E00E57A36 /* RealmGenre.swift in Sources */,
 				E291A1811E82D1EA00140293 /* RealmMovie.swift in Sources */,
+				E27018811E889B2000E57A36 /* RealmActress.swift in Sources */,
+				E270187F1E889AE400E57A36 /* RealmActor.swift in Sources */,
 				E2FC0B2B1E5D207B00A29590 /* MovieTableViewCell.swift in Sources */,
+				E27018851E889BEF00E57A36 /* RealmDirector.swift in Sources */,
 				E21414C21DF7C21300914640 /* AppDelegate.swift in Sources */,
 				E2D72F161E54D8030036E814 /* Movie.swift in Sources */,
 			);
