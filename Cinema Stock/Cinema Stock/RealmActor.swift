@@ -9,10 +9,11 @@
 import Foundation
 import RealmSwift
 
-class RealmActor: Object {
+class Actor: Object {
 	dynamic var actor_ID: Int = 0
 	dynamic var firstName: String = ""
 	dynamic var lastName: String = ""
+	let movies = List<RealmMovie>()
 	override open class func primaryKey() -> String? {
 		return "actor_ID"
 	}

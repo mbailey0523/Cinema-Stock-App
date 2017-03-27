@@ -9,9 +9,10 @@
 import Foundation
 import RealmSwift
 
-class RealmGenre: Object {
+class Genre: Object {
 	dynamic var genre_ID: Int = 0
 	dynamic var genreName: String = ""
+	let movies = List<RealmMovie>()
 	override open class func primaryKey() -> String? {
 		return "genre_ID"
 	}

@@ -9,10 +9,11 @@
 import Foundation
 import RealmSwift
 
-class RealmWriter: Object {
+class Writer: Object {
 	dynamic var writer_ID: Int = 0
 	dynamic var firstName: String = ""
 	dynamic var lastName: String = ""
+	let movies = List<RealmMovie>()
 	override open class func primaryKey() -> String? {
 		return "writer_ID"
 	}

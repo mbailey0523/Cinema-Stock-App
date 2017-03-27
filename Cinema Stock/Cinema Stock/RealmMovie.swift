@@ -14,11 +14,12 @@ class RealmMovie: Object {
 	dynamic var title: String = ""
 	dynamic var year: Int = 0000
 	dynamic var rated: String = ""
-	dynamic var actor: String = ""
-	dynamic var actress: String = ""
-	dynamic var writer: String = ""
-	dynamic var director: String = ""
-	dynamic var genre: String = ""
+	//let actor = List<Actor>()
+	let actor = LinkingObjects(fromType: Actor.self, property: "movies")
+	let actress = LinkingObjects(fromType: Actress.self, property: "movies")
+	let writer = LinkingObjects(fromType: Writer.self, property: "movies")
+	let director = LinkingObjects(fromType: Director.self, property: "movies")
+	let genre = LinkingObjects(fromType: Genre.self, property: "movies")
 	dynamic var movieDescription: String = ""
 	dynamic var userRating: Int = 0
 	dynamic var owned: Bool = false
