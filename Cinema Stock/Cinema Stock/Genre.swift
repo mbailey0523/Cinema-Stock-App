@@ -8,6 +8,8 @@
 
 import Foundation
 import RealmSwift
+import Realm
+
 
 class Genre: Object {
 	dynamic var genre_ID: Int = 0
@@ -17,7 +19,28 @@ class Genre: Object {
 		return "genre_ID"
 	}
 	
-	public override init(value: Any) {
+	// MARK: Initialization
+	init(genre_ID: Int, genreName: String, movies: List<Movie>) {
 		
+		// Initialize stored properties
+		self.genre_ID = genre_ID
+		self.genreName = genreName
+		//self.movies = List<Movie.movies>
 	}
+	
+	required init(realm: RLMRealm, schema: RLMObjectSchema) {
+		fatalError("init(realm:schema:) has not been implemented")
+	}
+	
+	required init(value: Any, schema: RLMSchema) {
+		fatalError("init(value:schema:) has not been implemented")
+	}
+	
+	required init() {
+		fatalError("init() has not been implemented")
+	}
+	
+	//let realm = try! Realm()
+	
+	// MARK: Methods
 }

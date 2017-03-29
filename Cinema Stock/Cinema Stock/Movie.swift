@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import Realm
+
 
 class Movie: Object {
 	
@@ -50,19 +52,26 @@ class Movie: Object {
 		self.inList = inList
 	}
 	
-//	required init(realm: Realm, schema: ObjectSchema) {
-//		fatalError("init(realm:schema:) has not been implemented")
+	required init(realm: RLMRealm, schema: RLMObjectSchema) {
+		fatalError("init(realm:schema:) has not been implemented")
+	}
+	
+	required init(value: Any, schema: RLMSchema) {
+		fatalError("init(value:schema:) has not been implemented")
+	}
+	
+	required init() {
+		fatalError("init() has not been implemented")
+	}
+	
+//	let realm = try! Realm()
+//
+//	try! realm.write {
+//		realm.add(movie)
 //	}
-//	
-//	required init() {
-//		fatalError("init() has not been implemented")
-//	}
-//	
-//	required init(value: Any, schema: ObjectSchema) {
-//		fatalError("init(value:schema:) has not been implemented")
-//	}
-//	
-//	let movie = try! Realm()
+	
+	// MARK: Methods
+	
 }
 
 
