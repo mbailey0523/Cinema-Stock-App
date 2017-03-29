@@ -1,5 +1,5 @@
 //
-//  RealmWriter.swift
+//  Writer.swift
 //  Cinema Stock
 //
 //  Created by Morgan Colbert on 3/26/17.
@@ -13,8 +13,12 @@ class Writer: Object {
 	dynamic var writer_ID: Int = 0
 	dynamic var firstName: String = ""
 	dynamic var lastName: String = ""
-	let movies = List<RealmMovie>()
+	let movies = List<Movie>()
 	override open class func primaryKey() -> String? {
 		return "writer_ID"
+	}
+	
+	public override init(value: Any) {
+		
 	}
 }
