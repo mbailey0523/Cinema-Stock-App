@@ -20,14 +20,14 @@ class Actress: Object {
 	}
 	
 	// MARK: Initialization
-	init(actress_ID: Int, firstName: String, lastName: String, movies: List<Movie>) {
-		
-		// Initialize stored properties
-		self.actress_ID = actress_ID
-		self.firstName = firstName
-		self.lastName = lastName
-		//self.movies = List<Movie.movies>
-	}
+//	init(actress_ID: Int, firstName: String, lastName: String, movies: List<Movie>) {
+//		
+//		// Initialize stored properties
+//		self.actress_ID = actress_ID
+//		self.firstName = firstName
+//		self.lastName = lastName
+//		//self.movies = List<Movie.movies>
+//	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
 		fatalError("init(realm:schema:) has not been implemented")

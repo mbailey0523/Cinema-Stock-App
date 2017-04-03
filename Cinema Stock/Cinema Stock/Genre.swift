@@ -20,13 +20,13 @@ class Genre: Object {
 	}
 	
 	// MARK: Initialization
-	init(genre_ID: Int, genreName: String, movies: List<Movie>) {
-		
-		// Initialize stored properties
-		self.genre_ID = genre_ID
-		self.genreName = genreName
-		//self.movies = List<Movie.movies>
-	}
+//	init(genre_ID: Int, genreName: String, movies: List<Movie>) {
+//		
+//		// Initialize stored properties
+//		self.genre_ID = genre_ID
+//		self.genreName = genreName
+//		//self.movies = List<Movie.movies>
+//	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
 		fatalError("init(realm:schema:) has not been implemented")

@@ -33,24 +33,24 @@ class Movie: Object {
 	}
 	
 	// MARK: Initialization
-	init(movie_ID: Int, title: String, year: String, rated: String, actor: Actor?, actress: Actress?, writer: Writer, director: Director, genre: Genre, movieDescription: String, userRating: Int, owned: Bool, loaned: Bool, inList: Bool) {
-		
-		// Initialize stored properties
-		self.movie_ID = movie_ID
-		self.title = title
-		self.year = year
-		self.rated = rated
-		self.actor = actor
-		self.actress = actress
-		self.writer = writer
-		self.director = director
-		self.genre = genre
-		self.movieDescription = movieDescription
-		self.userRating = userRating
-		self.owned = owned
-		self.loaned = loaned
-		self.inList = inList
-	}
+//	init(movie_ID: Int, title: String, year: String, rated: String, actor: Actor?, actress: Actress?, writer: Writer, director: Director, genre: Genre, movieDescription: String, userRating: Int, owned: Bool, loaned: Bool, inList: Bool) {
+//		
+//		// Initialize stored properties
+//		self.movie_ID = movie_ID
+//		self.title = title
+//		self.year = year
+//		self.rated = rated
+//		self.actor = actor
+//		self.actress = actress
+//		self.writer = writer
+//		self.director = director
+//		self.genre = genre
+//		self.movieDescription = movieDescription
+//		self.userRating = userRating
+//		self.owned = owned
+//		self.loaned = loaned
+//		self.inList = inList
+//	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
 		fatalError("init(realm:schema:) has not been implemented")

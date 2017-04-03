@@ -184,28 +184,35 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 			return
 		}
 		
-		let title = movieTitleTextField.text
-		let year = releaseYearTextField.text
-		let rating = ratedTextField.text
-		let actor1 = actorsTextField.text ?? ""
-		let actor2 = actorsTextField2.text ?? ""
-		let actor3 = actorsTextField3.text ?? ""
-		let actress1 = actressTextField.text ?? ""
-		let actress2 = actressTextField2.text ?? ""
-		let actress3 = actressTextField3.text ?? ""
-		let writer1 = writersTextField.text
-		let writer2 = writersTextField2.text ?? ""
-		let writer3 = writersTextField3.text ?? ""
-		let director1 = directorsTextField.text
-		let director2 = directorsTextField2.text ?? ""
-		let director3 = directorsTextField3.text ?? ""
-		let genre1 = genreTextField.text
-		let genre2 = genreTextField2.text ?? ""
-		let genre3 = genreTextField3.text ?? ""
-		let description = movieDescriptionTextField.text
-			
+//		let movie_ID = 0000
+//		let title = movieTitleTextField.text
+//		let year = releaseYearTextField.text
+//		let rated = ratedTextField.text
+//		let actor = actorsTextField.text ?? ""
+////		let actor2 = actorsTextField2.text ?? ""
+////		let actor3 = actorsTextField3.text ?? ""
+//		let actress = actressTextField.text ?? ""
+////		let actress2 = actressTextField2.text ?? ""
+////		let actress3 = actressTextField3.text ?? ""
+//		let writer = writersTextField.text
+////		let writer2 = writersTextField2.text ?? ""
+////		let writer3 = writersTextField3.text ?? ""
+//		let director = directorsTextField.text
+////		let director2 = directorsTextField2.text ?? ""
+////		let director3 = directorsTextField3.text ?? ""
+//		let genre = genreTextField.text
+////		let genre2 = genreTextField2.text ?? ""
+////		let genre3 = genreTextField3.text ?? ""
+//		let movieDescription = movieDescriptionTextField.text
+//		let userRating = ""
+//		let owned = false
+//		let loaned = false
+//		let inList = false
+		
 		// Set the movie to be passed to MovieTableViewController after the unwind segue.
-		movie = Movie(title: title!, year: year!, rated: rating!, actor1: actor1, actor2: actor2, actor3: actor3, actress1: actress1, actress2: actress2, actress3: actress3, writer1: writer1!, writer2: writer2, writer3: writer3, director1: director1!, director2: director2, director3: director3, genre1: genre1!, genre2: genre2, genre3: genre3, description: description!)
+		//movie = Movie(title: title!, year: year!, rated: rating!, actor1: actor1, actor2: actor2, actor3: actor3, actress1: actress1, actress2: actress2, actress3: actress3, writer1: writer1!, writer2: writer2, writer3: writer3, director1: director1!, director2: director2, director3: director3, genre1: genre1!, genre2: genre2, genre3: genre3, description: description!)
+		
+//		movie = Movie(movie_ID: movie_ID, title: title!, year: year!, rated: rated!, actor: actor, actress: actress, writer: writer!, director: director!, genre: genre!, movieDescription: movieDescription!, userRating: userRating, owned: owned, loaned: loaned, inList: inList)
 	}
 	@IBAction func cancel(_ sender: UIBarButtonItem) {
 		dismiss(animated: true, completion: nil)

@@ -21,14 +21,14 @@ class Writer: Object {
 	}
 	
 	// MARK: Initialization
-	init(writer_ID: Int, firstName: String, lastName: String, movies: List<Movie>) {
-		
-		// Initialize stored properties
-		self.writer_ID = writer_ID
-		self.firstName = firstName
-		self.lastName = lastName
-		//self.movies = List<Movie.movies>
-	}
+//	init(writer_ID: Int, firstName: String, lastName: String, movies: List<Movie>) {
+//		
+//		// Initialize stored properties
+//		self.writer_ID = writer_ID
+//		self.firstName = firstName
+//		self.lastName = lastName
+//		//self.movies = List<Movie.movies>
+//	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
 		fatalError("init(realm:schema:) has not been implemented")
