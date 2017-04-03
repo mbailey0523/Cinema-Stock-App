@@ -270,7 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -436,9 +436,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RealmSwift.framework",
+					/Realm.framework,
 				);
 				INFOPLIST_FILE = "Cinema Stock/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "senior.project.Cinema-Stock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -455,9 +456,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RealmSwift.framework",
+					/Realm.framework,
 				);
 				INFOPLIST_FILE = "Cinema Stock/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "senior.project.Cinema-Stock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
