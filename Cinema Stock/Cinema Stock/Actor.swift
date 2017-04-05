@@ -15,20 +15,21 @@ class Actor: Object {
 	dynamic var actor_ID: Int = 0
 	dynamic var firstName: String = ""
 	dynamic var lastName: String = ""
-	let movies = List<Movie>()
+	//let movies = List<Movie>()
 	override open class func primaryKey() -> String? {
 		return "actor_ID"
 	}
 	
 	// MARK: Initialization
-//	init(actor_ID: Int, firstName: String, lastName: String, movies: List<Movie>) {
-//		
-//		// Initialize stored properties
-//		self.actor_ID = actor_ID
-//		self.firstName = firstName
-//		self.lastName = lastName
-//		//self.movies = List<Movie.movies>
-//	}
+	init(actor_ID: Int, firstName: String, lastName: String) {
+		super.init()
+		
+		// Initialize stored properties
+		self.actor_ID = actor_ID
+		self.firstName = firstName
+		self.lastName = lastName
+		//self.movies = List<Movie.movies>
+	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
 		fatalError("init(realm:schema:) has not been implemented")
@@ -42,7 +43,18 @@ class Actor: Object {
 		fatalError("init() has not been implemented")
 	}
 	
-	//let realm = try! Realm()
+	var actors = [Actor]()
 	
 	// MARK: Methods
+	func addActor() {
+		let actor1 = Actor(actor_ID: 0001, firstName: "", lastName: "")
+		
+		actors += [actor1]
+		
+		let realm = try! Realm()
+		
+		try! realm.write {
+			realm.add(actor1)
+		}
+	}
 }

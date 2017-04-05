@@ -15,20 +15,21 @@ class Writer: Object {
 	dynamic var writer_ID: Int = 0
 	dynamic var firstName: String = ""
 	dynamic var lastName: String = ""
-	let movies = List<Movie>()
+	//let movies = List<Movie>()
 	override open class func primaryKey() -> String? {
 		return "writer_ID"
 	}
 	
 	// MARK: Initialization
-//	init(writer_ID: Int, firstName: String, lastName: String, movies: List<Movie>) {
-//		
-//		// Initialize stored properties
-//		self.writer_ID = writer_ID
-//		self.firstName = firstName
-//		self.lastName = lastName
-//		//self.movies = List<Movie.movies>
-//	}
+	init(writer_ID: Int, firstName: String, lastName: String) {
+		super.init()
+		
+		// Initialize stored properties
+		self.writer_ID = writer_ID
+		self.firstName = firstName
+		self.lastName = lastName
+		//self.movies = List<Movie.movies>
+	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
 		fatalError("init(realm:schema:) has not been implemented")
@@ -42,7 +43,18 @@ class Writer: Object {
 		fatalError("init() has not been implemented")
 	}
 	
-	//let realm = try! Realm()
+	var writers = [Writer]()
 	
 	// MARK: Methods
+	func addWriter() {
+		let writer1 = Writer(writer_ID: 0001, firstName: "", lastName: "")
+		
+		writers += [writer1]
+		
+		let realm = try! Realm()
+		
+		try! realm.write {
+			realm.add(writer1)
+		}
+	}
 }

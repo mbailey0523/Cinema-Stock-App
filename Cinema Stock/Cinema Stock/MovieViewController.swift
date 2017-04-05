@@ -43,6 +43,9 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 	*/
 	var movie: Movie?
 	
+	var notificationToken: NotificationToken!
+	var realm: Realm!
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -67,6 +70,30 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		genreTextField.delegate = self
 		genreTextField2.delegate = self
 		genreTextField3.delegate = self
+	}
+	
+	func setupRealm() {
+		// Log in existing user with username and password
+		let username = "test"
+		let password = "test"
+		
+		SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false), server: URL(string: "http://127.0.0.1:9080")!) { user, error in
+			guard let user = user else {
+				fatalError(String(describing: error))
+			}
+			
+			DispatchQueue.main.async {
+				// Open Realm
+				let configuration = Realm.Configuration(
+					syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: "realm://127.0.0.1:9080/~/realmtasks")!)
+				)
+				self.realm = try! Realm(configuration: configuration)
+			}
+		}
+	}
+	
+	deinit {
+		notificationToken.stop()
 	}
 	
 	//MARK: UITextFieldDelegate
@@ -172,7 +199,6 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 //		saveButton.isEnabled = false
 //	}
 	
-	
 	// MARK: Navigation
 	
 	// This method lets you configure a view controller before it is presented
@@ -184,36 +210,25 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 			return
 		}
 		
-//		let movie_ID = 0000
-//		let title = movieTitleTextField.text
-//		let year = releaseYearTextField.text
-//		let rated = ratedTextField.text
-//		let actor = actorsTextField.text ?? ""
-////		let actor2 = actorsTextField2.text ?? ""
-////		let actor3 = actorsTextField3.text ?? ""
-//		let actress = actressTextField.text ?? ""
-////		let actress2 = actressTextField2.text ?? ""
-////		let actress3 = actressTextField3.text ?? ""
+		let movie_ID = 0000
+		let title = movieTitleTextField.text
+		let year = releaseYearTextField.text
+		let rated = ratedTextField.text
+//		let actor = actorsTextField.text
+//		let actress = actressTextField.text
 //		let writer = writersTextField.text
-////		let writer2 = writersTextField2.text ?? ""
-////		let writer3 = writersTextField3.text ?? ""
 //		let director = directorsTextField.text
-////		let director2 = directorsTextField2.text ?? ""
-////		let director3 = directorsTextField3.text ?? ""
 //		let genre = genreTextField.text
-////		let genre2 = genreTextField2.text ?? ""
-////		let genre3 = genreTextField3.text ?? ""
-//		let movieDescription = movieDescriptionTextField.text
-//		let userRating = ""
-//		let owned = false
-//		let loaned = false
-//		let inList = false
+		let movieDescription = movieDescriptionTextField.text
+		let userRating = 0
+		let owned = false
+		let loaned = false
+		let inList = false
 		
-		// Set the movie to be passed to MovieTableViewController after the unwind segue.
-		//movie = Movie(title: title!, year: year!, rated: rating!, actor1: actor1, actor2: actor2, actor3: actor3, actress1: actress1, actress2: actress2, actress3: actress3, writer1: writer1!, writer2: writer2, writer3: writer3, director1: director1!, director2: director2, director3: director3, genre1: genre1!, genre2: genre2, genre3: genre3, description: description!)
-		
-//		movie = Movie(movie_ID: movie_ID, title: title!, year: year!, rated: rated!, actor: actor, actress: actress, writer: writer!, director: director!, genre: genre!, movieDescription: movieDescription!, userRating: userRating, owned: owned, loaned: loaned, inList: inList)
+		 //Set the movie to be passed to MovieTableViewController after the unwind segue.
+		movie = Movie(movie_ID: movie_ID, title: title!, year: year!, rated: rated!, actor: Actor(actor_ID: 0, firstName: "", lastName: ""), actress: Actress(actress_ID: 0, firstName: "", lastName: ""), writer: Writer(writer_ID: 0, firstName: "", lastName: ""), director: Director(director_ID: 0, firstName: "", lastName: ""), genre: Genre(genre_ID: 0, genreName: ""), movieDescription: movieDescription!, userRating: userRating, owned: owned, loaned: loaned, inList: inList)
 	}
+	
 	@IBAction func cancel(_ sender: UIBarButtonItem) {
 		dismiss(animated: true, completion: nil)
 	}

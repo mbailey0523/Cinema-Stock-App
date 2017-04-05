@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 
+
 class MovieTableViewController: UITableViewController {
 	
 	// MARK: Properties
@@ -110,52 +111,20 @@ class MovieTableViewController: UITableViewController {
 			tableView.insertRows(at: [newIndexPath], with: .automatic)
 		}
 	}
-	
+
 	
 	// MARK: Private Methods
 	private func loadSampleMovies(){
-		let movie1 = Movie()
-		//guard let movie1 = Movie(title: "Beauty and the Beast", year: "1991", rated: "G", actor1: "Robby Benson", actor2: "", actor3: "", actress1: "Paige O'Hara", actress2: "", actress3: "", writer1: "Linda Woolverton", writer2: "Brenda Chapman", writer3: "", director1: "Gary Trousdale", director2: "Kirk Wise", director3: "", genre1: "Animation", genre2: "Family", genre3: "Musical", description: "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince.")
-//		else {
-//			fatalError("Unable to instantiate movie1.")
-//		}
-		movie1.movie_ID = 0001
-		movie1.title = "Beauty and the Beast"
-		movie1.year = "1991"
-		movie1.rated = "G"
-//		movie1.actor = "Robby Benson"
-//		movie1.actress = "Paige O'Hara"
-//		movie1.writer1 = "Linda Woolverton"
-//		movie1.writer2 = "Brenda Chapman"
-//		movie1.director1 = "Gary Trousdale"
-//		movie1.director2 = "Kirk Wise"
-//		movie1.genre1 = "Animation"
-//		movie1.genre2 = "Family"
-//		movie1.genre3 = "Musical"
-		movie1.movieDescription = "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince."
-		movie1.owned = true
-		movie1.loaned = false
-		movie1.inList = false
+		let movie1 = Movie(movie_ID: 0001, title: "Beauty and the Beast", year: "1991", rated: "G", actor: Actor(actor_ID: 0001, firstName: "", lastName: ""), actress: Actress(actress_ID: 0001, firstName: "", lastName: ""), writer: Writer(writer_ID: 0001, firstName: "", lastName: ""), director: Director(director_ID: 0001, firstName: "", lastName: ""), genre: Genre(genre_ID: 0001, genreName: ""), movieDescription: "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince.", userRating: 0, owned: true, loaned: false, inList: false)
 		
-		
-//		guard let movie2 = Movie(movie_ID: <#T##Int#>, title: <#T##String#>, year: <#T##String#>, rated: <#T##String#>, actor: <#T##Actor?#>, actress: <#T##Actress?#>, writer: <#T##Writer#>, director: <#T##Director#>, genre: <#T##Genre#>, movieDescription: <#T##String#>, userRating: <#T##Int#>, owned: <#T##Bool#>, loaned: <#T##Bool#>, inList: <#T##Bool#>)
-//		//guard let movie2 = Movie(title: "She's the Man", year: "2006", rated: "PG-13", actor1: "Channing Tatum", actor2: "", actor3: "", actress1: "Amanda Bynes", actress2: "", actress3: "", writer1: "Ewan Leslie", writer2: "Karen McCullah", writer3: "", director1: "Andy Fickman", director2: "", director3: "", genre1: "Comedy", genre2: "Romance", genre3: "Sport", description: "When her brother decides to ditch for a couple weeks in London, Viola heads over to his elite boarding school, disguises herself as him, and procedes to fall for one of her soccer teammates. Little does she realize she's not the only one with romantic troubles, as she, as he, gets in the middle of a series of intermingled love affairs.")
-//		else {
-//			fatalError("Unable to instantiate movie2.")
-//		}
-		
-		
-//		guard let movie3 = Movie(movie_ID: <#T##Int#>, title: <#T##String#>, year: <#T##String#>, rated: <#T##String#>, actor: <#T##Actor?#>, actress: <#T##Actress?#>, writer: <#T##Writer#>, director: <#T##Director#>, genre: <#T##Genre#>, movieDescription: <#T##String#>, userRating: <#T##Int#>, owned: <#T##Bool#>, loaned: <#T##Bool#>, inList: <#T##Bool#>)
-//		//guard let movie3 = Movie(title: "21 Jump Street", year: "2012", rated: "R", actor1: "Jonah Hill", actor2: "Channing Tatum", actor3: "", actress1: "", actress2: "", actress3: "", writer1: "Michael Bacall", writer2: "", writer3: "", director1: "Phil Lord", director2: "Christopher Miller", director3: "", genre1: "Action", genre2: "Comedy", genre3: "Crime" , description: "A pair of underachieved cops are sent back to a local high school to blend in and bring down a synthetic drug ring.")
-//		else {
-//			fatalError("Unable to instantiate movie3.")
-//		}
-		
-		
-		//movies += [movie1, movie2, movie3]
 		movies += [movie1]
+		
+		let realm = try! Realm()
+		
+		try! realm.write {
+			realm.add(movie1)
+		}
 	}
-
 }
 
 
