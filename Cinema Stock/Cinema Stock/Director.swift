@@ -40,16 +40,17 @@ class Director: Object {
 	}
 	
 	required init() {
-		fatalError("init() has not been implemented")
+		//fatalError("init() has not been implemented")
+		super.init()
 	}
 	
-	var directors = [Director]()
+	let directors = List<Director>()
 	
 	// MARK: Methods
 	func addDirector() {
 		let director1 = Director(director_ID: 0001, firstName: "", lastName: "")
 		
-		directors += [director1]
+		directors.append(director1)
 		
 		let realm = try! Realm()
 		

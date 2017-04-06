@@ -38,16 +38,17 @@ class Genre: Object {
 	}
 	
 	required init() {
-		fatalError("init() has not been implemented")
+		//fatalError("init() has not been implemented")
+		super.init()
 	}
 	
-	var genres = [Genre]()
+	let genres = List<Genre>()
 	
 	// MARK: Methods
 	func addActor() {
 		let genre1 = Genre(genre_ID: 0001, genreName: "")
 		
-		genres += [genre1]
+		genres.append(genre1)
 		
 		let realm = try! Realm()
 		

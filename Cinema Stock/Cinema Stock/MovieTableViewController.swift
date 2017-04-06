@@ -13,7 +13,7 @@ import RealmSwift
 class MovieTableViewController: UITableViewController {
 	
 	// MARK: Properties
-	var movies = [Movie]()
+	let movies = List<Movie>()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -117,7 +117,7 @@ class MovieTableViewController: UITableViewController {
 	private func loadSampleMovies(){
 		let movie1 = Movie(movie_ID: 0001, title: "Beauty and the Beast", year: "1991", rated: "G", actor: Actor(actor_ID: 0001, firstName: "", lastName: ""), actress: Actress(actress_ID: 0001, firstName: "", lastName: ""), writer: Writer(writer_ID: 0001, firstName: "", lastName: ""), director: Director(director_ID: 0001, firstName: "", lastName: ""), genre: Genre(genre_ID: 0001, genreName: ""), movieDescription: "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince.", userRating: 0, owned: true, loaned: false, inList: false)
 		
-		movies += [movie1]
+		movies.append(movie1)
 		
 		let realm = try! Realm()
 		

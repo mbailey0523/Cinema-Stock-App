@@ -39,16 +39,17 @@ class Actress: Object {
 	}
 	
 	required init() {
-		fatalError("init() has not been implemented")
+		//fatalError("init() has not been implemented")
+		super.init()
 	}
 	
-	var actresses = [Actress]()
+	let actresses = List<Actress>()
 	
 	// MARK: Methods
 	func addActress() {
 		let actress1 = Actress(actress_ID: 0001, firstName: "", lastName: "")
 		
-		actresses += [actress1]
+		actresses.append(actress1)
 		
 		let realm = try! Realm()
 		

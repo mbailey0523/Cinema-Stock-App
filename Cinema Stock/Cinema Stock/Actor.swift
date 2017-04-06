@@ -40,16 +40,17 @@ class Actor: Object {
 	}
 	
 	required init() {
-		fatalError("init() has not been implemented")
+		//fatalError("init() has not been implemented")
+		super.init()
 	}
 	
-	var actors = [Actor]()
+	let actors = List<Actor>()
 	
 	// MARK: Methods
 	func addActor() {
 		let actor1 = Actor(actor_ID: 0001, firstName: "", lastName: "")
 		
-		actors += [actor1]
+		actors.append(actor1)
 		
 		let realm = try! Realm()
 		

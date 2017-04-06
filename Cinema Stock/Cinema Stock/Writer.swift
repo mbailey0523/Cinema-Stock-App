@@ -40,16 +40,17 @@ class Writer: Object {
 	}
 	
 	required init() {
-		fatalError("init() has not been implemented")
+//		fatalError("init() has not been implemented")
+		super.init()
 	}
 	
-	var writers = [Writer]()
+	let writers = List<Writer>()
 	
 	// MARK: Methods
 	func addWriter() {
 		let writer1 = Writer(writer_ID: 0001, firstName: "", lastName: "")
 		
-		writers += [writer1]
+		writers.append(writer1)
 		
 		let realm = try! Realm()
 		
