@@ -226,7 +226,7 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		let inList = false
 		
 		 //Set the movie to be passed to MovieTableViewController after the unwind segue.
-		movie = Movie(movie_ID: movie_ID, title: title!, year: year!, rated: rated!, actor: Actor(actor_ID: 0, firstName: "", lastName: ""), actress: Actress(actress_ID: 0, firstName: "", lastName: ""), writer: Writer(writer_ID: 0, firstName: "", lastName: ""), director: Director(director_ID: 0, firstName: "", lastName: ""), genre: Genre(genre_ID: 0, genreName: ""), movieDescription: movieDescription!, userRating: userRating, owned: owned, loaned: loaned, inList: inList)
+		movie = Movie(movie_ID: movie_ID, title: title!, year: year!, rated: rated!, actor: List<Actor>(), actress: List<Actress>(), writer: List<Writer>(), director: List<Director>(), genre: List<Genre>(), movieDescription: movieDescription!, userRating: userRating, owned: owned, loaned: loaned, inList: inList)
 	}
 	
 	@IBAction func cancel(_ sender: UIBarButtonItem) {

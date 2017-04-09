@@ -18,11 +18,11 @@ class Movie: Object {
 	dynamic var title: String = ""
 	dynamic var year: String = ""
 	dynamic var rated: String = ""
-	let actor = LinkingObjects(fromType: Actor.self, property: "primaryKey()")
-	let actress = LinkingObjects(fromType: Actress.self, property: "primaryKey()")
-	let writer = LinkingObjects(fromType: Writer.self, property: "primaryKey()")
-	let director = LinkingObjects(fromType: Director.self, property: "primaryKey()")
-	let genre = LinkingObjects(fromType: Genre.self, property: "primaryKey()")
+	let actor = List<Actor>()
+	let actress = List<Actress>()
+	let writer = List<Writer>()
+	let director = List<Director>()
+	let genre = List<Genre>()
 	dynamic var movieDescription: String = ""
 	dynamic var userRating: Int = 0
 	dynamic var owned: Bool = false
@@ -33,7 +33,7 @@ class Movie: Object {
 	}
 	
 	// MARK: Initialization
-	init(movie_ID: Int, title: String, year: String, rated: String, actor: Actor, actress: Actress, writer: Writer, director: Director, genre: Genre, movieDescription: String, userRating: Int, owned: Bool, loaned: Bool, inList: Bool) {
+	init(movie_ID: Int, title: String, year: String, rated: String, actor: List<Actor>, actress: List<Actress>, writer: List<Writer>, director: List<Director>, genre: List<Genre>, movieDescription: String, userRating: Int, owned: Bool, loaned: Bool, inList: Bool) {
 		super.init()
 		
 		// Initialize stored properties
@@ -54,11 +54,13 @@ class Movie: Object {
 	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
-		fatalError("init(realm:schema:) has not been implemented")
+		//fatalError("init(realm:schema:) has not been implemented")
+		super.init()
 	}
 	
 	required init(value: Any, schema: RLMSchema) {
-		fatalError("init(value:schema:) has not been implemented")
+		//fatalError("init(value:schema:) has not been implemented")
+		super.init()
 	}
 	
 	required init() {

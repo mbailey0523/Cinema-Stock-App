@@ -115,7 +115,7 @@ class MovieTableViewController: UITableViewController {
 	
 	// MARK: Private Methods
 	private func loadSampleMovies(){
-		let movie1 = Movie(movie_ID: 0001, title: "Beauty and the Beast", year: "1991", rated: "G", actor: Actor(actor_ID: 0001, firstName: "", lastName: ""), actress: Actress(actress_ID: 0001, firstName: "", lastName: ""), writer: Writer(writer_ID: 0001, firstName: "", lastName: ""), director: Director(director_ID: 0001, firstName: "", lastName: ""), genre: Genre(genre_ID: 0001, genreName: ""), movieDescription: "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince.", userRating: 0, owned: true, loaned: false, inList: false)
+		let movie1 = Movie(movie_ID: 0001, title: "Beauty and the Beast", year: "1991", rated: "G", actor: List<Actor>(), actress: List<Actress>(), writer: List<Writer>(), director: List<Director>(), genre: List<Genre>(), movieDescription: "Belle, whose father is imprisoned by the Beast, offers herself instead, unaware her captor to be an enchanted prince.", userRating: 0, owned: true, loaned: false, inList: false)
 		
 		movies.append(movie1)
 		
