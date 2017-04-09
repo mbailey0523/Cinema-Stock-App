@@ -23,7 +23,6 @@
 		E27018831E889B7200E57A36 /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27018821E889B7200E57A36 /* Writer.swift */; };
 		E27018851E889BEF00E57A36 /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27018841E889BEF00E57A36 /* Director.swift */; };
 		E27018871E889C0E00E57A36 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27018861E889C0E00E57A36 /* Genre.swift */; };
-		E291A1811E82D1EA00140293 /* RealmMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E291A1801E82D1EA00140293 /* RealmMovie.swift */; };
 		E2D72F161E54D8030036E814 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D72F151E54D8030036E814 /* Movie.swift */; };
 		E2FC0B2B1E5D207B00A29590 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FC0B2A1E5D207B00A29590 /* MovieTableViewCell.swift */; };
 		E2FC0B2D1E5D259400A29590 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FC0B2C1E5D259400A29590 /* MovieTableViewController.swift */; };
@@ -73,11 +72,7 @@
 		E27018821E889B7200E57A36 /* Writer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
 		E27018841E889BEF00E57A36 /* Director.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
 		E27018861E889C0E00E57A36 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
-		E291A1801E82D1EA00140293 /* RealmMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMovie.swift; sourceTree = "<group>"; };
 		E2D72F151E54D8030036E814 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		E2D72F171E56833D0036E814 /* MovieCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewController.swift; sourceTree = "<group>"; };
-		E2D72F1B1E56900B0036E814 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
-		E2D72F1D1E5695510036E814 /* MovieCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		E2FC0B2A1E5D207B00A29590 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		E2FC0B2C1E5D259400A29590 /* MovieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +122,6 @@
 			children = (
 				E21414C11DF7C21300914640 /* AppDelegate.swift */,
 				E21414C31DF7C21300914640 /* MovieViewController.swift */,
-				E291A1801E82D1EA00140293 /* RealmMovie.swift */,
 				E270187E1E889AE400E57A36 /* Actor.swift */,
 				E27018801E889B2000E57A36 /* Actress.swift */,
 				E27018821E889B7200E57A36 /* Writer.swift */,
@@ -136,9 +130,6 @@
 				E2D72F151E54D8030036E814 /* Movie.swift */,
 				E2FC0B2C1E5D259400A29590 /* MovieTableViewController.swift */,
 				E2FC0B2A1E5D207B00A29590 /* MovieTableViewCell.swift */,
-				E2D72F171E56833D0036E814 /* MovieCollectionViewController.swift */,
-				E2D72F1B1E56900B0036E814 /* MovieCollectionViewCell.swift */,
-				E2D72F1D1E5695510036E814 /* MovieCollectionViewFlowLayout.swift */,
 				E21414C51DF7C21300914640 /* Main.storyboard */,
 				E21414C81DF7C21300914640 /* Assets.xcassets */,
 				E21414CA1DF7C21300914640 /* LaunchScreen.storyboard */,
@@ -283,7 +274,6 @@
 				E2FC0B2D1E5D259400A29590 /* MovieTableViewController.swift in Sources */,
 				E21414C41DF7C21300914640 /* MovieViewController.swift in Sources */,
 				E27018871E889C0E00E57A36 /* Genre.swift in Sources */,
-				E291A1811E82D1EA00140293 /* RealmMovie.swift in Sources */,
 				E27018811E889B2000E57A36 /* Actress.swift in Sources */,
 				E270187F1E889AE400E57A36 /* Actor.swift in Sources */,
 				E2FC0B2B1E5D207B00A29590 /* MovieTableViewCell.swift in Sources */,
