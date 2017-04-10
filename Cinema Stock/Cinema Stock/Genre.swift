@@ -47,7 +47,7 @@ class Genre: Object {
 	let genres = List<Genre>()
 	
 	// MARK: Methods
-	func addActor() {
+	func addGenre() {
 		let genre1 = Genre(genre_ID: 0001, genreName: "")
 		
 		genres.append(genre1)
