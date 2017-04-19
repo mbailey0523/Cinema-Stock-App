@@ -15,7 +15,7 @@ class Writer: Object {
 	dynamic var writer_ID: Int = 0
 	dynamic var firstName: String = ""
 	dynamic var lastName: String = ""
-	//let movies = List<Movie>()
+	let writerMovies = LinkingObjects(fromType: Movie.self, property: "writer")
 	override open class func primaryKey() -> String? {
 		return "writer_ID"
 	}
@@ -28,21 +28,17 @@ class Writer: Object {
 		self.writer_ID = writer_ID
 		self.firstName = firstName
 		self.lastName = lastName
-		//self.movies = List<Movie.movies>
 	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
-		//fatalError("init(realm:schema:) has not been implemented")
 		super.init()
 	}
 	
 	required init(value: Any, schema: RLMSchema) {
-		//fatalError("init(value:schema:) has not been implemented")
 		super.init()
 	}
 	
 	required init() {
-//		fatalError("init() has not been implemented")
 		super.init()
 	}
 	

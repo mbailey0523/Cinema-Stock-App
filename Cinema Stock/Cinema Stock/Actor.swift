@@ -15,7 +15,7 @@ class Actor: Object {
 	dynamic var actor_ID: Int = 0
 	dynamic var firstName: String = ""
 	dynamic var lastName: String = ""
-	//let movies = List<Movie>()
+	let actorMovies = LinkingObjects(fromType: Movie.self, property: "actor")
 	override open class func primaryKey() -> String? {
 		return "actor_ID"
 	}
@@ -28,21 +28,17 @@ class Actor: Object {
 		self.actor_ID = actor_ID
 		self.firstName = firstName
 		self.lastName = lastName
-		//self.movies = List<Movie.movies>
 	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
-		//fatalError("init(realm:schema:) has not been implemented")
 		super.init()
 	}
 	
 	required init(value: Any, schema: RLMSchema) {
-		//fatalError("init(value:schema:) has not been implemented")
 		super.init()
 	}
 	
 	required init() {
-		//fatalError("init() has not been implemented")
 		super.init()
 	}
 	

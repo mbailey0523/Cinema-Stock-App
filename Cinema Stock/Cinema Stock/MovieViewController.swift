@@ -72,29 +72,42 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		genreTextField3.delegate = self
 	}
 	
-	func setupRealm() {
-		// Log in existing user with username and password
-		let username = "test"
-		let password = "test"
-		
-		SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false), server: URL(string: "http://127.0.0.1:9080")!) { user, error in
-			guard let user = user else {
-				fatalError(String(describing: error))
-			}
-			
-			DispatchQueue.main.async {
-				// Open Realm
-				let configuration = Realm.Configuration(
-					syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: "realm://127.0.0.1:9080/~/realmtasks")!)
-				)
-				self.realm = try! Realm(configuration: configuration)
-			}
-		}
-	}
-	
-	deinit {
-		notificationToken.stop()
-	}
+//	func setupRealm() {
+//		// Log in existing user with username and password
+//		let username = "test"
+//		let password = "test"
+//		
+//		SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false), server: URL(string: "http://127.0.0.1:9080")!) { user, error in
+//			guard let user = user else {
+//				fatalError(String(describing: error))
+//			}
+//			
+//			DispatchQueue.main.async {
+//				// Open Realm
+//				let configuration = Realm.Configuration(
+//					syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: "realm://127.0.0.1:9080/~/cinemastock")!)
+//				)
+//				self.realm = try! Realm(configuration: configuration)
+//				
+////				func updateList() {
+////					if self.items.realm == nil, let list = self.realm.objects(TaskList.self).first {
+////						self.items = list.items
+////					}
+////					self.tableView.reloadData()
+////				}
+////				updateList()
+////				
+////				// Notify us when Realm changes
+////				self.notificationToken = self.realm.addNotificationBlock { _ in
+////					updateList()
+////				}
+//			}
+//		}
+//	}
+//	
+//	deinit {
+//		notificationToken.stop()
+//	}
 	
 	//MARK: UITextFieldDelegate
 	
@@ -193,11 +206,6 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		return true
 	}
 	
-//	//Save Button
-//	func textFieldDidBeginEditing(_ textField: UITextField) {
-//		// Disable the Save button qhile editing
-//		saveButton.isEnabled = false
-//	}
 	
 	// MARK: Navigation
 	
@@ -206,7 +214,7 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		super.prepare(for: segue, sender: sender)
 		// Configure the destination view controller only when the save button is pressed.
 		guard let button = sender as? UIBarButtonItem, button === saveButton else {
-			os_log("The saved button was not pressed, cancelling.", log: OSLog.default, type: .debug)
+			os_log("The save button was not pressed, cancelling.", log: OSLog.default, type: .debug)
 			return
 		}
 		
@@ -214,14 +222,26 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		let title = movieTitleTextField.text
 		let year = releaseYearTextField.text
 		let rated = ratedTextField.text
-//		let actor = actorsTextField.text
-//		let actress = actressTextField.text
-//		let writer = writersTextField.text
-//		let director = directorsTextField.text
-//		let genre = genreTextField.text
+		
+		let actor = actorsTextField.text
+		//Actor.firstName = actor
+		//List<Actor>().append(actor)
+		
+		let actress = actressTextField.text
+		
+		
+		let writer = writersTextField.text
+		
+		
+		let director = directorsTextField.text
+		
+		
+		let genre = genreTextField.text
+		
+		
 		let movieDescription = movieDescriptionTextField.text
 		let userRating = 0
-		let owned = false
+		let owned = true
 		let loaned = false
 		let inList = false
 		
@@ -229,6 +249,7 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 		movie = Movie(movie_ID: movie_ID, title: title!, year: year!, rated: rated!, actor: List<Actor>(), actress: List<Actress>(), writer: List<Writer>(), director: List<Director>(), genre: List<Genre>(), movieDescription: movieDescription!, userRating: userRating, owned: owned, loaned: loaned, inList: inList)
 	}
 	
+	// Cancel Button
 	@IBAction func cancel(_ sender: UIBarButtonItem) {
 		dismiss(animated: true, completion: nil)
 	}
@@ -297,13 +318,6 @@ class MovieViewController: UIViewController, UITextFieldDelegate, UINavigationCo
 	
 	
 	// MARK: Private Methods
-	
-//	private func updateSaveButtonState() {
-//		// Disable the Save button if text field is empty
-//		let titleText = movieTitleTextField.text
-//		saveButton.isEnabled = titleText.isEmpty
-//	}
-	
-	
+
 }
 

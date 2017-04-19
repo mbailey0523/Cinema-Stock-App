@@ -14,7 +14,7 @@ import Realm
 class Genre: Object {
 	dynamic var genre_ID: Int = 0
 	dynamic var genreName: String = ""
-	//let movies = List<Movie>()
+	let genreMovies = LinkingObjects(fromType: Movie.self, property: "genre")
 	override open class func primaryKey() -> String? {
 		return "genre_ID"
 	}
@@ -26,21 +26,17 @@ class Genre: Object {
 		// Initialize stored properties
 		self.genre_ID = genre_ID
 		self.genreName = genreName
-		//self.movies = List<Movie.movies>
 	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
-		//fatalError("init(realm:schema:) has not been implemented")
 		super.init()
 	}
 	
 	required init(value: Any, schema: RLMSchema) {
-		//fatalError("init(value:schema:) has not been implemented")
 		super.init()
 	}
 	
 	required init() {
-		//fatalError("init() has not been implemented")
 		super.init()
 	}
 	

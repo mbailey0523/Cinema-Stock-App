@@ -18,11 +18,16 @@ class Movie: Object {
 	dynamic var title: String = ""
 	dynamic var year: String = ""
 	dynamic var rated: String = ""
-	let actor = List<Actor>()
-	let actress = List<Actress>()
-	let writer = List<Writer>()
-	let director = List<Director>()
-	let genre = List<Genre>()
+	var actor = List<Actor>()
+	var actress = List<Actress>()
+	var writer = List<Writer>()
+	var director = List<Director>()
+	var genre = List<Genre>()
+//	let actor = LinkingObjects(fromType: Actor.self, property: "actorMovies")
+//	let actress = LinkingObjects(fromType: Actress.self, property: "actressMovies")
+//	let writer = LinkingObjects(fromType: Writer.self, property: "writerMovies")
+//	let director = LinkingObjects(fromType: Director.self, property: "directorMovies")
+//	let genre = LinkingObjects(fromType: Genre.self, property: "genreMovies")
 	dynamic var movieDescription: String = ""
 	dynamic var userRating: Int = 0
 	dynamic var owned: Bool = false
@@ -54,21 +59,16 @@ class Movie: Object {
 	}
 	
 	required init(realm: RLMRealm, schema: RLMObjectSchema) {
-		//fatalError("init(realm:schema:) has not been implemented")
 		super.init()
 	}
 	
 	required init(value: Any, schema: RLMSchema) {
-		//fatalError("init(value:schema:) has not been implemented")
 		super.init()
 	}
 	
 	required init() {
-		//fatalError("init() has not been implemented")
 		super.init()
 	}
-	
-	// MARK: Methods
 }
 
 
